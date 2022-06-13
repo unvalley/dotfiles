@@ -7,6 +7,7 @@ unvalley's dotfiles managed with chezmoi.
 | Terminal | [Wezterm](https://github.com/wez/wezterm) |
 | Shell | [fish](https://fishshell.com) |
 
+Files names prefix is added by chezmoi. See [chezmoi Design](https://www.chezmoi.io/user-guide/frequently-asked-questions/design/).
 
 ## Setup
 Install:
@@ -16,3 +17,4 @@ Install:
 Bitwarden:
 
     WIP
+
