@@ -1,0 +1,38 @@
+add_newline = false
+
+[username]
+disabled = true
+
+[character]
+success_symbol = "[▶](bold green)"
+error_symbol = "[▶](bold red)"
+
+[directory]
+truncate_to_repo = false
+
+[time]
+disabled = false
+
+[package]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[docker_context]
+symbol = "🐳"
+
+[git_status]
+conflicted = "💥"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🌚‍"
+stashed = "📦"
+modified = "📝"
+staged = '🔦'
+renamed = "🏷"
+deleted = "🗑"
+
+
+

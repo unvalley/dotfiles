@@ -1,0 +1,69 @@
+# EDITOR
+set -x EDITOR vim
+
+# LANGUAGE
+set -x LANG ja_JP.UTF-8
+# gsutil
+export CLOUDSDK_PYTHON=python3
+
+# anyenv
+set -x PATH ~/.anyenv/bin $PATH
+eval (anyenv init - | source)
+
+# rust
+set -g fish_user_paths $HOME/.cargo/bin
+
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH  $PYENV_ROOT/bin $PATH
+pyenv init - | source
+
+# go
+set -x GOPATH $HOME
+#set -x GOROOT /usr/local/opt/go/libexec
+#set -x GOPATH $HOME/.go
+#set -x PATH $GOPATH/bin $GOROOT/bin $PATH
+
+
+# Google Cloud SDK
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+
+# starship
+starship init fish | source
+
+# zoxide
+zoxide init fish | source
+
+# fzf
+set -U FZF_LEGACY_KEYBINDINGS 0
+set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
+
+# KEY_BINDINGS
+function fish_user_key_bindings
+    bind \co __fzf_open --editor
+    bind \cr __fzf_reverse_isearch
+    bind \c] __ghq_repository_search
+	# I wanna use \cb on tmux.
+    # bind \cb fzf_git_recent_branch
+    bind \cs __fzf_cd
+end
+
+# cd and ls
+function cd
+builtin cd $argv[1]
+ls -l
+end
+
+
+## OPTIONS
+function fzf
+    command fzf --height 30% --reverse --border $argv
+end
+
+fish_add_path /usr/local/opt/mysql@5.7/bin
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; test -f /Users/unvalley/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /Users/unvalley/.ghcup/bin $PATH # ghcup-env
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /Users/unvalley/.anyenv/envs/pyenv/versions/anaconda3-2021.05/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
