@@ -1,0 +1,25 @@
+set shell=/bin/bash
+
+syntax on
+filetype indent on
+
+colorscheme desert
+set number
+set ruler
+set wildmenu
+set showcmd
+set showmatch
+set cursorline
+
+set encoding=utf-8
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set autoindent
+
