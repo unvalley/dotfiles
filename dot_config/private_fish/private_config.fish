@@ -1,8 +1,8 @@
-# EDITOR
 set -x EDITOR vim
+set -x LANG en_US.UTF-8
+set -x GIT_MERGE_AUTOEDIT no
 
-# LANGUAGE
-set -x LANG ja_JP.UTF-8
+
 # gsutil
 export CLOUDSDK_PYTHON=python3
 

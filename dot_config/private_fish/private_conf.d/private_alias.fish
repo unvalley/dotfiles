@@ -1,8 +1,7 @@
-
-alias cat="bat"
-alias grep="rg"
-alias zel="zellij"
-
+alias cat='bat'
+alias grep='rg'
+alias zel='zellij'
+alias nv='nvim'
 alias e='exa --icons --git'
 alias l=e
 alias ls=e
