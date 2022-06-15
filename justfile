@@ -1,4 +1,5 @@
 dotfilesPath := "$HOME/Users/unvalley/.local/share/chezmoi"
+vscodeSettingsPath := "$HOME/Users/unvalley/Library/Application Support/Code/User"
 
 default:
   @just --choose
@@ -8,3 +9,9 @@ homebrew-install:
 
 homebrew-apply:
   brew bundle --file '{{dotfilesPath}}/dot_config/homebrew/Brewfile'
+
+vscode-apply:
+  cat '{{vscodeSettingsPath}}/extensions' | while read line
+  do
+   code --install-extension $line
+  done
