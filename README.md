@@ -9,6 +9,16 @@ unvalley's dotfiles managed with chezmoi.
 Files names prefix is added by chezmoi. See
 [chezmoi Design](https://www.chezmoi.io/user-guide/frequently-asked-questions/design/).
 
+## TODO:
+
+- fix install (just, Homebrew)
+- refine fish configs
+- devcontainer for VSCode
+- replace Homebrew to Nix
+- add language configs (.prettierrc, .eslintrc.json,...)
+- consider ssh keys and Bitwarden using chezmoi template
+
+
 ## Setup
 
 Install:
@@ -18,3 +28,5 @@ Install:
 Bitwarden:
 
     WIP
+
+
