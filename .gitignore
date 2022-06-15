@@ -1,0 +1,6 @@
+gcloud/
+aws/
+.git-credentials
+.ssh/
+
+.DS_Store
