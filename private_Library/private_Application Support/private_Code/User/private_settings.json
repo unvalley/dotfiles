@@ -1,0 +1,394 @@
+{
+  // -------------------------------------
+  // Editor
+  // -------------------------------------
+  "editor.suggestSelection": "first",
+  "editor.fontSize": 16,
+  "editor.inlineSuggest.enabled": true,
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.lightbulb.enabled": false,
+  "editor.formatOnPaste": true,
+  "editor.showFoldingControls": "always",
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": false,
+  "editor.rulers": [80],
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.localityBonus": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoSurround": "languageDefined",
+  "editor.renderWhitespace": "all",
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.cursorStyle": "line",
+  "editor.lineNumbers": "on",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "editor.scrollBeyondLastLine": false,
+  // -------------------------------------
+  // Debug
+  // -------------------------------------
+  "debug.inlineValues": true,
+  "debug.internalConsoleOptions": "openOnSessionStart",
+  "debug.openDebug": "openOnSessionStart",
+  "indentRainbow.excludedLanguages": ["haskell"],
+  "[csv]": {
+    "editor.wordWrap": "off"
+  },
+  "[tsv]": {
+    "editor.wordWrap": "off"
+  },
+  "[haskell]": {
+    "editor.tabSize": 2
+  },
+  "[scala]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.suggest.showKeywords": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+      //   "source.addMissingImports": true
+      //   "source.organizeImports": true
+    }
+  },
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": true,
+  "javascript.validate.enable": false,
+  // -------------------------------------
+  // TypeScript
+  // -------------------------------------
+  "[typescript]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.suggest.showKeywords": false,
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.tslint": true,
+      "source.addMissingImports": true
+      //   "source.organizeImports": true
+    }
+  },
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescriptreact]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.suggest.showKeywords": false,
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.addMissingImports": true
+      //   "source.organizeImports": true
+    }
+  },
+  // -------------------------------------
+  // ESLint
+  // -------------------------------------
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  // -------------------------------------
+  // Prettier
+  // -------------------------------------
+  "prettier.bracketSpacing": true,
+  "prettier.proseWrap": "always",
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.useEditorConfig": false,
+  // -------------------------------------
+  // Files
+  // -------------------------------------
+  "files.eol": "\n",
+  "files.exclude": {
+    "USE_GITIGNORE": true,
+    "/.git": true,
+    "/node_modules": true,
+    "/node_modules/": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "files.watcherExclude": {
+    "/node_modules": true,
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "files.autoSave": "onFocusChange",
+  "files.associations": {
+    "*.vue": "vue",
+    "*.md": "mdx",
+    "*.tsx": "typescriptreact"
+  },
+  "search.exclude": {
+    "/node_modules": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/dist": true,
+    "**/.build": true,
+    "**/.gh-pages": true
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.enablePreview": false,
+  "breadcrumbs.enabled": true,
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "files.trimTrailingWhitespace": false
+  },
+  "[json]": {
+    "editor.tabSize": 8
+  },
+  "vs-kubernetes": {
+    "vs-kubernetes.helm-path": "/Users/kirohi/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+    "vs-kubernetes.draft-path": "/Users/kirohi/.vs-kubernetes/tools/draft/darwin-amd64/draft",
+    "vs-kubernetes.minikube-path": "/Users/kirohi/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+    "vs-kubernetes.minikube-path.mac": "/Users/kirohi/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools",
+    "editor.formatOnSave": false
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  //   "python.linting.mypyEnabled": true,
+  "python.pythonPath": "/Users/unvalley/.anyenv/envs/pyenv/versions/anaconda3-2021.05/bin/python",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "emmet.triggerExpansionOnTab": true,
+  "html.format.contentUnformatted": "pre, code, textarea, title, h1, h2, h3, h4, h5, h6, p",
+  "html.format.extraLiners": "",
+  "html.format.unformatted": null,
+  "workbench.editor.showTabs": true,
+  /**
+   * Vim Settings
+   */
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<space>",
+  "vim.hlsearch": true,
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "sdfghjkl",
+  "vim.searchHighlightColor": "rgba(255, 235, 60, 0.4)",
+  "vim.visualstar": true,
+  "vim.useCtrlKeys": true,
+  "vim.debug.silent": true,
+  "vim.surround": true,
+  // yank
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)",
+  "vim.highlightedyank.duration": 150,
+  // sに続けて二文字キー入力で，その二文字に移動
+  // ref: https://bit.ly/3s9iP7H
+  "vim.sneak": true,
+  // statusBar color-settings (vim-airline) do I need this?
+  "vim.statusBarColorControl": false,
+  "vim.statusBarColors.normal": ["#161821", "#818596"],
+  "vim.statusBarColors.insert": ["#84A0C6", "#161821"],
+  "vim.statusBarColors.visual": ["#B4BE82", "#161821"],
+  "vim.statusBarColors.visualline": ["#B4BE82", "#161821"],
+  "vim.statusBarColors.visualblock": ["#B4BE82", "#161821"],
+  "vim.statusBarColors.replace": ["#E2A478", "#161821"],
+  "vim.statusBarColors.commandlineinprogress": ["#818596", "#161821"],
+  "vim.statusBarColors.searchinprogressmode": ["#818596", "#161821"],
+  "vim.statusBarColors.easymotionmode": ["#818596", "#161821"],
+  "vim.statusBarColors.easymotioninputmode": ["#818596", "#161821"],
+  "vim.statusBarColors.surroundinputmode": ["#818596", "#161821"],
+  // 左右方向のカーソル移動で，行をまたいで移動する
+  "vim.whichwrap": "h,l,<,>,[,]",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+        "before": [
+            "shift+f"
+        ],
+        "after": [
+            "leader",
+            "leader",
+            "leader",
+            "b",
+            "d",
+            "w"
+        ]
+    },
+    {
+        "before": [
+            "alt+s"
+        ],
+        "commands": [
+            ":split"
+        ]
+    },
+    {
+        "before": [
+            "alt+v"
+        ],
+        "commands": [
+            ":vsplit"
+        ]
+    },
+    {
+        "before": [
+            "<space>"
+        ],
+        "commands": [
+            "vspacecode.space"
+        ]
+    },
+    {
+        "before": [
+            ","
+        ],
+        "commands": [
+            "vspacecode.space",
+            {
+                "command": "whichkey.triggerKey",
+                "args": "m"
+            }
+        ]
+    }
+],
+  // -------------------------------------
+  //  NeoVim
+  // -------------------------------------
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.darwin": "/Users/unvalley/.config/nvim/init.vim",
+  "sync.gist": "fa45a6fc2dc7b4bd67d14e77d5211e30",
+  "screencastMode.onlyKeyboardShortcuts": true,
+  "tabnine.experimentalAutoImports": true,
+  "remote.onstartup": true,
+  // -------------------------------------
+  //  Go
+  // -------------------------------------
+  "go.useLanguageServer": true,
+  "go.autocompleteUnimportedPackages": true,
+  "gopls": {
+    "usePlaceholders": true
+  },
+  "go.languageServerExperimentalFeatures": {
+    "diagnostics": true
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "go.docsTool": "godoc",
+  "go.formatTool": "goimports",
+  "go.formatFlags": ["-w"],
+  "go.lintFlags": ["--enable-all", "--new"],
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "aws.samcli.location": "/usr/local/bin/sam",
+  "todo-tree.tree.showScanModeButton": false,
+  "workbench.colorTheme": "GitHub Dark Default",
+  "update.mode": "manual",
+  // -------------------------------------
+  // Rust
+  // -------------------------------------
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer",
+    "editor.formatOnSave": true
+  },
+  "rust-client.rustupPath": "/Users/unvalley/.cargo/bin/rustup",
+  "rust-analyzer.cargo.allFeatures": true,
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.assist.importGranularity": "crate",
+  "rust-analyzer.assist.importPrefix": "crate",
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascriptreact",
+    "typescriptreact",
+    "plaintext",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (Eex)"
+  ],
+  "mssql.connections": [
+    {
+      "server": "{{put-server-name-here}}",
+      "database": "{{put-database-name-here}}",
+      "user": "{{put-username-here}}",
+      "password": ""
+    }
+  ],
+  "gitlens.hovers.currentLine.over": "line",
+  "sync.removeExtensions": true,
+  "metals.javaHome": "/Users/unvalley/.jabba/jdk/adopt@1.11.0-11/Contents/Home",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "react-native-tools.showUserTips": false,
+  "yaml.schemas": {},
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "bracketPairColorizer.depreciation-notice": false,
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#161821",
+    "statusBar.noFolderBackground": "#161821",
+    "statusBar.debuggingBackground": "#161821",
+    "statusBar.foreground": "#818596",
+    "statusBar.debuggingForeground": "#818596"
+  },
+"wallaby.startViewStatusBar": false,
+  "docsView.documentationView.updateMode": "sticky",
+"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+"vim.visualModeKeyBindingsNonRecursive": [
+    {
+        "before": [
+            "<space>"
+        ],
+        "commands": [
+            "vspacecode.space"
+        ]
+    },
+    {
+        "before": [
+            ","
+        ],
+        "commands": [
+            "vspacecode.space",
+            {
+                "command": "whichkey.triggerKey",
+                "args": "m"
+            }
+        ]
+    }
+],
+"haskell.manageHLS": "GHCup",
+"rust-analyzer.inlayHints.enable": false,
+"window.zoomLevel": -1,
+}
