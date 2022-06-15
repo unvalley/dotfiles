@@ -1,4 +1,4 @@
-set shell=/bin/bash
+set shell=/bin/fish
 
 syntax on
 filetype indent on
