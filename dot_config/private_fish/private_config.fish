@@ -56,9 +56,6 @@ end
 
 
 ## OPTIONS
-function fzf
-    command fzf --height 30% --reverse --border $argv
-end
 
 fish_add_path /usr/local/opt/mysql@5.7/bin
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; test -f /Users/unvalley/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /Users/unvalley/.ghcup/bin $PATH # ghcup-env
