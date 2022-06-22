@@ -11,9 +11,10 @@ SETUVAR --export PYENV_ROOT:/Users/unvalley/\x2epyenv
 SETUVAR Z_DATA_DIR:/Users/unvalley/\x2elocal/share/z
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_decors_2F_fish_2D_ghq_files:/Users/unvalley/\x2econfig/fish/functions/__ghq_repository_search\x2efish\x1e/Users/unvalley/\x2econfig/fish/conf\x2ed/ghq_key_bindings\x2efish\x1e/Users/unvalley/\x2econfig/fish/completions/ghq\x2efish
+SETUVAR _fisher_edc_2F_bass_files:/Users/unvalley/\x2econfig/fish/functions/__bass\x2epy\x1e/Users/unvalley/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jethrokuan_2F_fzf_files:/Users/unvalley/\x2econfig/fish/functions/__fzf_cd\x2efish\x1e/Users/unvalley/\x2econfig/fish/functions/__fzf_complete\x2efish\x1e/Users/unvalley/\x2econfig/fish/functions/__fzf_complete_preview\x2efish\x1e/Users/unvalley/\x2econfig/fish/functions/__fzf_find_file\x2efish\x1e/Users/unvalley/\x2econfig/fish/functions/__fzf_get_dir\x2efish\x1e/Users/unvalley/\x2econfig/fish/functions/__fzf_open\x2efish\x1e/Users/unvalley/\x2econfig/fish/functions/__fzf_parse_commandline\x2efish\x1e/Users/unvalley/\x2econfig/fish/functions/__fzf_reverse_isearch\x2efish\x1e/Users/unvalley/\x2econfig/fish/functions/__fzfcmd\x2efish\x1e/Users/unvalley/\x2econfig/fish/conf\x2ed/fzf\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/unvalley/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/unvalley/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejethrokuan/fzf\x1edecors/fish\x2dghq
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejethrokuan/fzf\x1edecors/fish\x2dghq\x1eedc/bass
 SETUVAR fish_color_autosuggestion:BD93F9
 SETUVAR fish_color_cancel:normal
 SETUVAR fish_color_command:F8F8F2
