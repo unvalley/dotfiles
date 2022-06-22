@@ -4,6 +4,7 @@ alias vim='nvim'
 alias cat='bat'
 alias grep='rg'
 alias zel='zellij'
+
 alias e='exa --icons --git'
 alias l=e
 alias ls=e
@@ -14,8 +15,10 @@ alias ll=ee
 alias et='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
 alias lt=et
 alias eta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
+alias tree=eta
 alias lta=eta
 alias l='clear && ls'
+
 alias rm=trash-put
 alias now='date "+%Y-%m-%d %H:%M:%S" | pbcopy'
 
@@ -36,19 +39,17 @@ alias nioff="npm install --offline"
 
 
 # Git
-
+alias g='git'
 alias ga='git add'
 alias gaa='git add .'
 alias gaaa='git add -A'
-alias gbd='git branch -d '
+alias gbd='git branch -d'
 
 alias gc='git commit'
 alias gcm='git commit -m'
 
 alias gco='git checkout'
 alias gcob='git checkout -b'
-alias gcom='git checkout master'
-alias gcod='git checkout develop'
 
 alias gd='git diff'
 alias gdh='git diff HEAD'
@@ -68,5 +69,4 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
 alias gclean-local='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
-alias gcz='git cz'
 
