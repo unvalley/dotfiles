@@ -37,6 +37,9 @@ zoxide init fish | source
 # fzf
 set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
+function fzf
+    command fzf --height 30% --reverse --border $argv
+end
 
 # KEY_BINDINGS
 function fish_user_key_bindings
