@@ -1,6 +1,6 @@
 require("rc/base")
 require("rc/plugins")
-require("rc/keybindings")
+require("rc/keymappings")
 
 -- omit install and compile when setting plugins
 -- vim.cmd[[autocmd BufWritePost plugins.lua PackerCompile]]
