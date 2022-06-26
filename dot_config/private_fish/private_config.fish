@@ -2,6 +2,9 @@ set -x EDITOR vim
 set -x LANG en_US.UTF-8
 set -x GIT_MERGE_AUTOEDIT no
 
+# dont show greeting
+set fish_greeting
+
 export PATH="$PATH:$HOME/bin"
 
 # gsutil
@@ -62,9 +65,4 @@ end
 
 fish_add_path /usr/local/opt/mysql@5.7/bin
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; test -f /Users/unvalley/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /Users/unvalley/.ghcup/bin $PATH # ghcup-env
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-eval /Users/unvalley/.anyenv/envs/pyenv/versions/anaconda3-2021.05/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<
 
