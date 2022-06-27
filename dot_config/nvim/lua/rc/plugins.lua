@@ -11,9 +11,9 @@ vim.cmd[[command! PackerCompile packadd packer.nvim | lua require'packers'.compi
 
 return require("packer").startup(function()
     -- package manager
-	use {"wbthomason/packer.nvim", opt = true}
+	use {"wbthomason/packer.nvim"}
     -- filer
-    use {"lambdalisue/fern.vim", opt = true}
+    use {"lambdalisue/fern.vim"}
     -- icon
     use {"kyazdani42/nvim-web-devicons"}
     -- comment
@@ -40,8 +40,6 @@ return require("packer").startup(function()
     -- pairs
     use {"windwp/nvim-autopairs"}
     require("nvim-autopairs").setup()
-	-- coc
-	use {"neoclide/coc.nvim", opt = true}
     
     if packer_bootstrap then
         require('packer').sync()
