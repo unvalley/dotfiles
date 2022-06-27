@@ -2,7 +2,7 @@ vim.keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR><C-L><Esc>", { noremap = true, 
 
 -- fern
 vim.keymap.set("n", "<Leader>fn", ":Fern . -reveal=% -drawer -toggle -width=30<CR>", { noremap = true })
-vim.keymap.set("n", "<Leader>fd", ":Fern %:h<CR>")
+vim.keymap.set("n", "<Leader>fd", ":Fern . -drawer<CR>")
 
 -- fzf-lua
 vim.keymap.set("n", "<Leader>ag", "<Cmd>lua require('fzf-lua').files()<CR>")
