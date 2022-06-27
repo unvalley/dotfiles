@@ -14,6 +14,7 @@ return require("packer").startup(function()
 	use {"wbthomason/packer.nvim"}
     -- filer
     use {"lambdalisue/fern.vim"}
+	-- use {"yuki-yano/fern-preview.vim"}
     -- icon
     use {"kyazdani42/nvim-web-devicons"}
     -- comment
@@ -31,8 +32,10 @@ return require("packer").startup(function()
     -- TODO: setting colors
     use {'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+		config = function()
+			require("rc/plugin-config/lualine")
+		end,
     }
-    require('lualine').setup()
     -- fuzzy finder
     use {'ibhagwan/fzf-lua'}
     -- tree

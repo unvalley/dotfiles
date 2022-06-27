@@ -22,6 +22,9 @@ alias l='clear && ls'
 alias rm=trash-put
 alias now='date "+%Y-%m-%d %H:%M:%S" | pbcopy'
 
+# fzf
+alias vif="vim $(fzf)"
+
 # Node.js
 alias ni="npm install"
 alias nrc="npm run local"
