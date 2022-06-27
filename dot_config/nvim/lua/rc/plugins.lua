@@ -11,9 +11,9 @@ vim.cmd[[command! PackerCompile packadd packer.nvim | lua require'packers'.compi
 
 return require("packer").startup(function()
     -- package manager
-	use {"wbthomason/packer.nvim"}
+	use {"wbthomason/packer.nvim", opt = true}
     -- filer
-    use {"lambdalisue/fern.vim"}
+    use {"lambdalisue/fern.vim", opt = true}
     -- icon
     use {"kyazdani42/nvim-web-devicons"}
     -- comment
@@ -24,7 +24,7 @@ return require("packer").startup(function()
         requires = {'vim-denops/denops.vim', opt = true}
     }
     -- surround
-    use {"tpope/vim-surround"}
+    use {"tpope/vim-surround", opt =true}
     -- git
 	use {'rhysd/git-messenger.vim', opt = true, cmd = {'GitMessenger'}}
     -- status bar
@@ -40,6 +40,8 @@ return require("packer").startup(function()
     -- pairs
     use {"windwp/nvim-autopairs"}
     require("nvim-autopairs").setup()
+	-- coc
+	use {"neoclide/coc.nvim", opt = true}
     
     if packer_bootstrap then
         require('packer').sync()
