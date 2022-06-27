@@ -14,7 +14,6 @@ return require("packer").startup(function()
 	use {"wbthomason/packer.nvim"}
     -- filer
     use {"lambdalisue/fern.vim"}
-	-- use {"yuki-yano/fern-preview.vim"}
     -- icon
     use {"kyazdani42/nvim-web-devicons"}
     -- comment
@@ -38,8 +37,6 @@ return require("packer").startup(function()
     }
     -- fuzzy finder
     use {'ibhagwan/fzf-lua'}
-    -- tree
-	use {'kyazdani42/nvim-tree.lua'}
     -- pairs
     use {"windwp/nvim-autopairs"}
     require("nvim-autopairs").setup()
