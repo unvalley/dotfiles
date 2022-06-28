@@ -23,6 +23,7 @@ return require("packer").startup(function()
     use {"yuki-yano/fuzzy-motion.vim",
         requires = {'vim-denops/denops.vim', opt = true}
     }
+	use {"rhysd/clever-f.vim"}
     -- surround
     use {"tpope/vim-surround", opt =true}
     -- git
