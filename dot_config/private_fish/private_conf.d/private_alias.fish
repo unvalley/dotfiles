@@ -4,7 +4,7 @@ alias vim='nvim'
 alias cat='bat'
 alias grep='rg'
 alias zel='zellij'
-alias c.='code .'
+alias c='code'
 
 alias e='exa --icons --git'
 alias l=e
