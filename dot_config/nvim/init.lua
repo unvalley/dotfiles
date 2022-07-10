@@ -6,4 +6,4 @@ require("rc/keymappings")
 vim.cmd[[autocmd BufWritePost /lua/rc/plugins.lua PackerCompile]]
 
 -- im-select setting for Japanese
--- autocmd InsertLeave * :silent !/usr/local/bin/im-select com.google.inputmethod.Japanese.Roman
+vim.cmd[[autocmd InsertLeave * :silent !/usr/local/bin/im-select com.google.inputmethod.Japanese.Roman]]
