@@ -1,9 +1,12 @@
-require("rc/base")
-require("rc/plugins")
-require("rc/keymappings")
+require "core"
+require "core.options"
 
--- omit install and compile when setting plugins
-vim.cmd[[autocmd BufWritePost /lua/rc/plugins.lua | PackerCompile]]
+vim.defer_fn(function()
+   require("core.utils").load_mappings()
+end, 0)
 
--- im-select setting for Japanese
-vim.cmd[[autocmd InsertLeave * :silent !/usr/local/bin/im-select com.google.inputmethod.Japanese.Roman]]
+-- setup packer + plugins
+require("core.packer").bootstrap()
+require "plugins"
+
+pcall(require, "custom")
