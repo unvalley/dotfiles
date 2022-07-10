@@ -166,6 +166,8 @@ local plugins = {
       end,
    },
 
+   ["rhysd/clever-f.vim"] = {},
+
    -- Only load whichkey after all the gui
    ["folke/which-key.nvim"] = {
       module = "which-key",
