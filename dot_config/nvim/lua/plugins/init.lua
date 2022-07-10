@@ -166,13 +166,6 @@ local plugins = {
       end,
    },
 
-   ["echasnovski/mini.nvim"] = {
-     cmd = "mini",
-     config = function ()
-         require "plugins.configs.mini"
-     end,
-   },
-
    -- Only load whichkey after all the gui
    ["folke/which-key.nvim"] = {
       module = "which-key",
