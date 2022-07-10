@@ -9,9 +9,21 @@ vim.cmd[[command! PackerSync packadd packer.nvim | lua require'packers'.sync()]]
 vim.cmd[[command! PackerClean packadd packer.nvim | lua require'packers'.clean()]]
 vim.cmd[[command! PackerCompile packadd packer.nvim | lua require'packers'.compile()]]
 
-return require("packer").startup(function()
+local startup = require("packer").startup(function()
     -- package manager
 	use {"wbthomason/packer.nvim"}
+	-- lsp
+	use {"williamboman/nvim-lsp-installer"}
+	use {"neovim/nvim-lspconfig"}
+	-- cmp
+	use {"hrsh7th/nvim-cmp"}
+	use {"hrsh7th/cmp-nvim-lsp"}
+	use {"hrsh7th/cmp-vsnip"}
+	use {"hrsh7th/cmp-buffer"}
+	use {"hrsh7th/vim-vsnip"}
+	-- formatter
+	use { "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" } }
+
     -- filer
     use {"lambdalisue/fern.vim"}
     -- icon
@@ -26,8 +38,6 @@ return require("packer").startup(function()
 	use {"rhysd/clever-f.vim"}
     -- surround
     use {"tpope/vim-surround", opt =true}
-    -- git
-	use {'rhysd/git-messenger.vim', opt = true, cmd = {'GitMessenger'}}
     -- status bar
     -- TODO: setting colors
     use {'nvim-lualine/lualine.nvim',
@@ -46,3 +56,50 @@ return require("packer").startup(function()
         require('packer').sync()
     end
 end)
+
+local lsp_installer = require "nvim-lsp-installer"
+local lspconfig = require "lspconfig"
+lsp_installer.setup()
+for _, server in ipairs(lsp_installer.get_installed_servers()) do
+  lspconfig[server.name].setup {
+    on_attach = on_attach,
+  }
+end
+
+vim.opt.completeopt = "menu,menuone,noselect"
+
+local cmp = require"cmp"
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<C-e>"] = cmp.mapping.close(),
+    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+  }),
+  sources = cmp.config.sources({
+    { name = "nvim_lsp" },
+    { name = "vsnip" },
+  }, {
+    { name = "buffer" },
+  })
+})
+
+-- formatter
+local null_ls = require "null-ls"
+null_ls.setup {
+  sources = {
+    null_ls.builtins.formatting.prettier.with {
+      prefer_local = "node_modules/.bin",
+    },
+  },
+}
+
+-- client.resolved_capabilities.document_formatting = false
+
+return startup
