@@ -30,6 +30,9 @@ M.on_attach = function(client, bufnr)
    if client.server_capabilities.signatureHelpProvider then
       require("nvchad.ui.signature").setup(client)
    end
+
+   -- aerial
+   require("aerial").on_attach(client, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -71,6 +74,19 @@ lspconfig.sumneko_lua.setup {
          },
       },
    },
+}
+
+lspconfig.tsserver.setup {
+  on_attach = M.on_attach,
+  capabilities = capabilities,
+}
+
+lspconfig.rust_analyzer.setup {
+  on_attach = M.on_attach,
+  capabilities = capabilities,
+  settings = {
+    rust_analyzer = {}
+  }
 }
 
 -- requires a file containing user's lspconfigs

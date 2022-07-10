@@ -67,6 +67,16 @@ M.tabufline = {
    },
 }
 
+M.aerial = {
+  n = {
+    ["<leader>a"] = { "<cmd> AerialToggle! <CR>", "aerial toggle" },
+    ["{"] = { "<cmd> AerialPrev <CR>" },
+    ["}"] = { "<cmd> AerialPrev <CR>" },
+    ["[["] = { "<cmd> AerialPrevUp <CR>" },
+    ["]]"] = { "<cmd> AerialNextUp <CR>" }
+  }
+}
+
 M.comment = {
    -- toggle comment in both modes
    n = {

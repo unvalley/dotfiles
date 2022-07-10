@@ -8,10 +8,8 @@ require("base46").load_highlight "syntax"
 require("base46").load_highlight "treesitter"
 
 local options = {
-   ensure_installed = {
-      "lua",
-      "vim",
-   },
+  -- install all
+   ensure_installed = "all",
    highlight = {
       enable = true,
       use_languagetree = true,
