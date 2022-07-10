@@ -150,17 +150,6 @@ local plugins = {
       end,
    },
 
-   ["yuki-yano/fuzzy-motion.vim"] = {
-      module = "fuzzy-motion",
-      config = function()
-         require "vim-denops/denops.vim"
-      end
-   }
-
-   ["rhysd/clever-f.vim"] = {
-     module = "clever-f"
-   }
-
    -- file managing , picker etc
    ["kyazdani42/nvim-tree.lua"] = {
       ft = "alpha",

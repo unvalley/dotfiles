@@ -21,19 +21,19 @@ M.general = {
    n = {
       ["<ESC>"] = { "<cmd> noh <CR>", "  no highlight" },
       -- switch between windows
-      -- ["<C-h>"] = { "<C-w>h", " window left" },
-      -- ["<C-l>"] = { "<C-w>l", " window right" },
-      -- ["<C-j>"] = { "<C-w>j", " window down" },
-      -- ["<C-k>"] = { "<C-w>k", " window up" },
+      ["<C-h>"] = { "<C-w>h", " window left" },
+      ["<C-l>"] = { "<C-w>l", " window right" },
+      ["<C-j>"] = { "<C-w>j", " window down" },
+      ["<C-k>"] = { "<C-w>k", " window up" },
       -- save
-      -- ["<C-s>"] = { "<cmd> w <CR>", "﬚  save file" },
+      ["<C-s>"] = { "<cmd> w <CR>", "﬚  save file" },
       -- Copy all
-      -- ["<C-c>"] = { "<cmd> %y+ <CR>", "  copy whole file" },
+      ["<C-c>"] = { "<cmd> %y+ <CR>", "  copy whole file" },
       -- line numbers
       ["<leader>n"] = { "<cmd> set nu! <CR>", "   toggle line number" },
       ["<leader>rn"] = { "<cmd> set rnu! <CR>", "   toggle relative number" },
       -- update nvchad
-      --["<leader>uu"] = { "<cmd> :NvChadUpdate <CR>", "  update nvchad" },
+      ["<leader>uu"] = { "<cmd> :NvChadUpdate <CR>", "  update nvchad" },
       ["<leader>tt"] = {
          function()
             require("base46").toggle_theme()
