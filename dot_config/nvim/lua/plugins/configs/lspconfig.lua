@@ -84,9 +84,7 @@ lspconfig.tsserver.setup {
 lspconfig.rust_analyzer.setup {
   on_attach = M.on_attach,
   capabilities = capabilities,
-  settings = {
-    rust_analyzer = {}
-  }
+  settings = {},
 }
 
 -- requires a file containing user's lspconfigs
