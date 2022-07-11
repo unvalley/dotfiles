@@ -4,7 +4,9 @@ local M = {}
 
 M.options = {
    -- load your options here or load module with options
-   user = function() end,
+   user = function()
+     vim.opt.tabstop = 4
+   end,
 
    nvChad = {
       update_url = "https://github.com/NvChad/NvChad",
@@ -15,11 +17,16 @@ M.options = {
 M.ui = {
    -- hl = highlights
    hl_add = {},
-   hl_override = {},
+   hl_override = {
+     Comment = {
+       italic = true,
+       fg = "#c0c0c0"
+     }
+   },
    changed_themes = {},
    theme_toggle = { "onedark", "one_light" },
    theme = "onedark", -- default theme
-   transparency = false,
+   transparency = 0.95,
 
    statusline = {
       separator_style = "default", -- default/round/block/arrow
@@ -38,7 +45,11 @@ M.ui = {
 M.plugins = {
    override = {},
    remove = {},
-   user = {},
+   user = {
+      ["goolord/alpha-nvim"] = {
+        disable = false,
+      }
+   },
    options = {
       lspconfig = {
          setup_lspconf = "", -- path of lspconfig file
