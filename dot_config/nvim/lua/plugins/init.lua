@@ -173,6 +173,26 @@ local plugins = {
       end,
    },
 
+   -- Rust
+   -- ["rust-lang/rust.vim"] = {},
+   ["simrat39/rust-tools.nvim"] = {
+     module = "rust-tools",
+     after = "nvim-lspconfig",
+     config = function()
+       require("rust-tools").setup({
+          server = {
+            settings = {
+              ["rust-analyzer"] = {
+                cargo = { allFeatures = true },
+                checkOnSave = { allTargets = true, command = "clippy" },
+                procMacro = { enable = true },
+              }
+            }
+          }
+       })
+     end,
+   },
+
    -- Only load whichkey after all the gui
    ["folke/which-key.nvim"] = {
       module = "which-key",
