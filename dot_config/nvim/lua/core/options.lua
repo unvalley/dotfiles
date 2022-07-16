@@ -16,7 +16,7 @@ opt.statusline = config.ui.statusline.config
 opt.showmode = false
 
 opt.title = true
-opt.clipboard = "unnamedplus"
+opt.clipboard = "unnamedplus,autoselect"
 opt.cul = true -- cursor line
 
 -- Indenting
