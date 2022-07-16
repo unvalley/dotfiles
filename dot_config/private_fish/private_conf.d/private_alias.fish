@@ -73,4 +73,5 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
 alias gclean-local='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
+alias tasks='gh issue list --repo unvalley/projects'
 

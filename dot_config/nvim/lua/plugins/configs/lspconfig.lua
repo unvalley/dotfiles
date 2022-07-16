@@ -25,7 +25,8 @@ M.on_attach = function(client, bufnr)
    end
 
    local lsp_mappings = utils.load_config().mappings.lspconfig
-   utils.load_mappings({ lsp_mappings }, { buffer = bufnr })
+   local bufopts = { noremap=true, silent=true, buffer=bufnr}
+   utils.load_mappings({ lsp_mappings }, bufopts)
 
    if client.server_capabilities.signatureHelpProvider then
       require("nvchad.ui.signature").setup(client)
@@ -76,17 +77,19 @@ lspconfig.sumneko_lua.setup {
    },
 }
 
-lspconfig.tsserver.setup {
+require('lspconfig').tsserver.setup {
   on_attach = M.on_attach,
   capabilities = capabilities,
 }
 
-lspconfig.rust_analyzer.setup {
+require('lspconfig').rust_analyzer.setup {
   on_attach = M.on_attach,
   capabilities = capabilities,
-  settings = {
-    ["rust-analyzer"] = {},
-  },
+}
+
+require("lspconfig").gopls.setup {
+  on_attach = M.on_attach,
+  capabilities = capabilities,
 }
 
 

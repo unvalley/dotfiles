@@ -20,14 +20,23 @@ opt.clipboard = "unnamedplus"
 opt.cul = true -- cursor line
 
 -- Indenting
-opt.expandtab = true
-opt.shiftwidth = 2
 opt.smartindent = true
+opt.expandtab = true
+opt.shiftwidth = 4
+opt.tabstop = 4
+opt.softtabstop = 4
 
 opt.fillchars = { eob = " " }
+opt.mouse = "a"
+
+-- search
 opt.ignorecase = true
 opt.smartcase = true
-opt.mouse = "a"
+opt.hlsearch = true
+
+-- command
+opt.wildmenu = true
+opt.wildmode = "longest, list, full"
 
 -- Numbers
 opt.number = true
@@ -42,8 +51,20 @@ opt.splitbelow = true
 opt.splitright = true
 opt.tabstop = 8
 opt.termguicolors = true
-opt.timeoutlen = 400
+opt.timeout = true
+opt.timeoutlen = 500
+opt.updatetime = 2000
+opt.jumpoptions = "stack"
+
+-- beap sound
+opt.errorbells = false
+opt.visualbell = false
+
+-- file
+opt.autoread = true
 opt.undofile = true
+opt.swapfile = false
+opt.backup = true
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250

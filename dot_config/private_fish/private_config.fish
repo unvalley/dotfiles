@@ -19,7 +19,7 @@ set -g fish_user_paths $HOME/.cargo/bin
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH  $PYENV_ROOT/bin $PATH
-fish_add_path /root/.rustup/toolchains/nightly-x86_64-apple-darwin/bin
+fish_add_path ~/.rustup/toolchains/nightly-x86_64-apple-darwin/bin
 
 pyenv init - | source
 
