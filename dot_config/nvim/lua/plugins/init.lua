@@ -206,6 +206,8 @@ local plugins = {
 
    -- autosave
    ["Pocco81/AutoSave.nvim"] = {
+      opt = true,
+      cmd = { "InsertEnter" },
       config = function()
          require "plugins.configs.autosave"
       end,
