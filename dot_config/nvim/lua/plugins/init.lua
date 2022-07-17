@@ -203,6 +203,9 @@ local plugins = {
      end,
    },
 
+   -- autosave
+   ["Pocco81/AutoSave.nvim"] = {},
+
    -- Only load whichkey after all the gui
    ["folke/which-key.nvim"] = {
       module = "which-key",

@@ -12,11 +12,11 @@ Files names prefix is added by chezmoi. See
 ## TODO:
 
 - fix install (just, Homebrew)
-- refine fish configs
 - devcontainer for VSCode
 - replace Homebrew to Nix
 - add language configs (.prettierrc, .eslintrc.json,...)
 - consider ssh keys and Bitwarden using chezmoi template
+- fzf for ssh
 
 
 ## Setup
