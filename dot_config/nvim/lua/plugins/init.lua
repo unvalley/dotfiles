@@ -15,6 +15,7 @@ local plugins = {
       end,
    },
 
+
    ["NvChad/nvterm"] = {
       module = "nvterm",
       config = function()
@@ -204,7 +205,11 @@ local plugins = {
    },
 
    -- autosave
-   ["Pocco81/AutoSave.nvim"] = {},
+   ["Pocco81/AutoSave.nvim"] = {
+      config = function()
+         require "plugins.configs.autosave"
+      end,
+   },
 
    -- Only load whichkey after all the gui
    ["folke/which-key.nvim"] = {
