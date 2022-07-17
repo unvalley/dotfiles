@@ -6,6 +6,7 @@ g.nvchad_theme = config.ui.theme
 g.toggle_theme_icon = "   "
 g.transparency = config.ui.transparency
 g.theme_switcher_loaded = false
+g.netrw_banner = 0
 
 -- use filetype.lua instead of filetype.vim
 g.did_load_filetypes = 0
@@ -24,7 +25,6 @@ opt.smartindent = true
 opt.expandtab = true
 opt.shiftwidth = 4
 opt.tabstop = 4
-opt.softtabstop = 4
 
 opt.fillchars = { eob = " " }
 opt.mouse = "a"
@@ -45,7 +45,6 @@ opt.shortmess:append "sI"
 opt.signcolumn = "yes"
 opt.splitbelow = true
 opt.splitright = true
-opt.tabstop = 8
 opt.termguicolors = true
 opt.timeout = true
 opt.timeoutlen = 500
