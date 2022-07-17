@@ -58,7 +58,7 @@ opt.visualbell = false
 
 -- file
 opt.undofile = true
-opt.backup = true
+opt.backup = false
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
