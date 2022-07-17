@@ -57,9 +57,7 @@ opt.errorbells = false
 opt.visualbell = false
 
 -- file
-opt.autoread = true
 opt.undofile = true
-opt.swapfile = false
 opt.backup = true
 
 -- interval for writing swap file to disk, also used by gitsigns
