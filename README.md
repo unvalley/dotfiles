@@ -9,6 +9,8 @@ unvalley's dotfiles managed with chezmoi.
 Files names prefix is added by chezmoi. See
 [chezmoi Design](https://www.chezmoi.io/user-guide/frequently-asked-questions/design/).
 
+NeoVim settings are based on [NvChad](https://github.com/NvChad/NvChad).
+
 ## TODO:
 
 - fix install (just, Homebrew)
@@ -30,3 +32,4 @@ Bitwarden:
     WIP
 
 
+Thanks for all dependencies.
