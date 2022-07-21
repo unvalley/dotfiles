@@ -1,10 +1,5 @@
 vim.cmd "packadd packer.nvim"
 
-
-local vscode_compatible_plugins = {
-   ["rhysd/clever-f.vim"] = {},
-}
-
 local plugins = {
    ["nvim-lua/plenary.nvim"] = { module = "plenary" },
    ["wbthomason/packer.nvim"] = {},
@@ -226,8 +221,4 @@ local plugins = {
 }
 
 
-if vim.g.vscode then
-    require("core.packer").run(vscode_compatible_plugins)
-else
-    require("core.packer").run(plugins)
-end
+require("core.packer").run(plugins)
