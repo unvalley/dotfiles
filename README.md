@@ -50,6 +50,11 @@ Install:
 - GitHub Hovercard
 
 
+## VSCode
+
+- [Visual Studio Code の設定を、他のPCと同期する](https://zenn.dev/longbridge/articles/0811abc01d10cc)
+    - Settings Sync
+
 ## GitHub TFA
 
 - [Githubの2段階認証を実施してgitコマンドが使えないときにやったこと](https://qiita.com/n_morioka/items/650d2950f527d594a00f)
