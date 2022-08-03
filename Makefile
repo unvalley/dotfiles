@@ -91,7 +91,7 @@ setup-mac:
 	defaults write -g com.apple.mouse.scaling 3
 	## スクロールの速さ
 	defaults write -g com.apple.scrollwheel.scaling 5
-	
+	defaults write com.apple.desktopservices DSDontWriteNetworkStores True
 
 
 	
