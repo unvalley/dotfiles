@@ -40,16 +40,6 @@ local default_keybinds = {
 	{ key = "z", mods = "ALT|SHIFT", action = wezterm.action({ EmitEvent = "toggle-tmux-keybinds" }) },
 	{ key = "e", mods = "ALT", action = wezterm.action({ EmitEvent = "trigger-nvim-with-scrollback" }) },
 	{ key = "x", mods = "ALT", action = wezterm.action({ CloseCurrentPane = { confirm = false } }) },
-	{
-		key = "r",
-		mods = "ALT",
-		action = wezterm.action({
-			ActivateKeyTable = {
-				name = "resize_pane",
-				one_shot = false,
-			},
-		}),
-	},
 }
 
 local config = {

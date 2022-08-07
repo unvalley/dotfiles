@@ -11,8 +11,8 @@ export PATH="$PATH:$HOME/bin"
 export CLOUDSDK_PYTHON=python3
 
 # anyenv
-set -x PATH ~/.anyenv/bin $PATH
-eval (anyenv init - | source)
+# set -x PATH ~/.anyenv/bin $PATH
+# eval (anyenv init - | source)
 
 # rust
 set -g fish_user_paths $HOME/.cargo/bin
@@ -21,7 +21,7 @@ set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH  $PYENV_ROOT/bin $PATH
 fish_add_path ~/.rustup/toolchains/1.62.0-x86_64-apple-darwin/bin
 
-pyenv init - | source
+# pyenv init - | source
 
 # go
 set -x GOPATH $HOME
