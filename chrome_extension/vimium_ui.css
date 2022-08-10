@@ -1,0 +1,20 @@
+div > .vimiumHintMarker {
+/* linkhint boxes */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#565756),
+color-stop(100%,#444444));
+border: 1px solid #E4E4E4;
+opacity: 1.0;
+text-shadow: none !important;
+}
+
+div > .vimiumHintMarker span {
+/* linkhint text */
+text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+color: #33cccc;
+font-size: 14px;
+font-family: Overpass, "ヒラギノ角ゴ Pro", Avenir, sans-serif;
+}
+
+div > .vimiumHintMarker > .matchingCharacter {
+color: #FF8700;
+}
