@@ -29,6 +29,7 @@ ndarray = "0.13.0"
 # source code template
 template = '''
 use proconio::input;
+
 fn main() {
 	unimplemented!();
 }
