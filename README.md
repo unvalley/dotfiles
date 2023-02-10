@@ -23,10 +23,14 @@ NeoVim settings are based on [NvChad](https://github.com/NvChad/NvChad).
 
 ## Setup
 
-Install:
+1. Install Vivaldi browser manually
+2. Install Google IME manaually (if it's ventura, you might need to install beta version)
+3. Clone this repository on user directory (/Users/${username})
+4. Install command
 
-    make install
-    make setup
+    - make install
+    - make setup
+
 
 
 ## Must Items
