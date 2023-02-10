@@ -2,6 +2,11 @@ set -x EDITOR vim
 set -x LANG en_US.UTF-8
 set -x GIT_MERGE_AUTOEDIT no
 
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    eval (/opt/homebrew/bin/brew shellenv)
+end
+
 # dont show greeting
 set fish_greeting
 
