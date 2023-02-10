@@ -31,7 +31,7 @@ set -x GOPATH $HOME
 
 
 # Google Cloud SDK
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+# source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
 # starship
 starship init fish | source
