@@ -63,4 +63,12 @@ NeoVim settings are based on [NvChad](https://github.com/NvChad/NvChad).
 
 - [Githubの2段階認証を実施してgitコマンドが使えないときにやったこと](https://qiita.com/n_morioka/items/650d2950f527d594a00f)
 
+
+## GitHub local setup
+- set up global .gitconfig
+- create a new SSH key
+- connect github through SSH
+    - `git config --global url.https://unvalley:{NEW_ACCESS_TOKEN}@github.com/.insteadOf https://github.com/` 
+
+
 Thanks for all dependencies.
