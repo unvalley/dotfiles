@@ -2,6 +2,11 @@ set -x EDITOR vim
 set -x LANG en_US.UTF-8
 set -x GIT_MERGE_AUTOEDIT no
 
+# EXSQL
+set -x EXSQL_HOME ~/src/github.com/plaidev/exsql
+export PATH="$PATH:$EXSQL_HOME/target/debug"
+# set -x EXSQL_BQ_RUNNING_PROJECT PROJECT_NAME
+
 # dont show greeting
 set fish_greeting
 
@@ -19,7 +24,6 @@ set -g fish_user_paths $HOME/.cargo/bin
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH  $PYENV_ROOT/bin $PATH
-fish_add_path ~/.rustup/toolchains/1.62.0-x86_64-apple-darwin/bin
 
 # pyenv init - | source
 
