@@ -35,7 +35,7 @@ set -x GOPATH $HOME
 
 
 # Google Cloud SDK
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+# source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
 # starship
 starship init fish | source
@@ -72,3 +72,4 @@ end
 fish_add_path /usr/local/opt/mysql@5.7/bin
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; test -f /Users/unvalley/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /Users/unvalley/.ghcup/bin $PATH # ghcup-env
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
