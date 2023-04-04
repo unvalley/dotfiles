@@ -37,11 +37,6 @@ set -x GOPATH $HOME
 # Google Cloud SDK
 # source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
-# starship
-starship init fish | source
-
-# zoxide
-zoxide init fish | source
 
 # fzf
 set -U FZF_LEGACY_KEYBINDINGS 0
@@ -72,4 +67,13 @@ end
 fish_add_path /usr/local/opt/mysql@5.7/bin
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; test -f /Users/unvalley/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /Users/unvalley/.ghcup/bin $PATH # ghcup-env
 
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
+if status is-interactive
+    # starship
+    starship init fish | source
+
+    # zoxide
+    zoxide init fish | source
+end
+

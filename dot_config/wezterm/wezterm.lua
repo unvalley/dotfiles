@@ -47,7 +47,6 @@ local config = {
 	font_size = 14.0,
 	color_scheme = "Jellybeans",
 	window_background_opacity = 0.95,
-	# window_background_tint = 0.0,
 	adjust_window_size_when_changing_font_size = false,
 
 	tab_bar_at_bottom = true,
