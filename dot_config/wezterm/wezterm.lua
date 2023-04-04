@@ -38,7 +38,6 @@ local default_keybinds = {
 	{ key = "PageDown", mods = "ALT", action = wezterm.action({ ScrollByPage = 1 }) },
 	{ key = "z", mods = "ALT", action = "ReloadConfiguration" },
 	{ key = "z", mods = "ALT|SHIFT", action = wezterm.action({ EmitEvent = "toggle-tmux-keybinds" }) },
-	{ key = "e", mods = "ALT", action = wezterm.action({ EmitEvent = "trigger-nvim-with-scrollback" }) },
 	{ key = "x", mods = "ALT", action = wezterm.action({ CloseCurrentPane = { confirm = false } }) },
 }
 
