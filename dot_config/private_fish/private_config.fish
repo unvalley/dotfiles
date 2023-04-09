@@ -28,18 +28,10 @@ export PATH="$PATH:$GOPATH/bin"
 # Python
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH  $PYENV_ROOT/bin $PATH
-
 # pyenv init - | source
-
-# Go
-#set -x GOPATH $HOME
-#set -x GOROOT /usr/local/opt/go/libexec
-#set -x GOPATH $HOME/.go
-#set -x PATH $GOPATH/bin $GOROOT/bin $PATH
 
 # Google Cloud SDK
 # source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
-# gsutil
 export CLOUDSDK_PYTHON=python3
 
 # fzf
