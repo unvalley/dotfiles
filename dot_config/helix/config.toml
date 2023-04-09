@@ -1,0 +1,24 @@
+theme = "onedark"
+
+[editor]
+line-number = "absolute"
+mouse = true
+cursorline = true
+auto-format = true
+bufferline = "multiple"
+
+[keys.insert]
+j = { k = "normal_mode" }
+"C-c" = "normal_mode"
+
+[editor.lsp]
+display-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+

@@ -10,3 +10,6 @@ wt = "watch --why -x test"
 u = "update"
 r = "run"
 cl = "clippy --tests"
+
+[net]
+git-fetch-with-cli = true

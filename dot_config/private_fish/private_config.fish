@@ -2,10 +2,11 @@ set -x EDITOR vim
 set -x LANG en_US.UTF-8
 set -x GIT_MERGE_AUTOEDIT no
 
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-    eval (/opt/homebrew/bin/brew shellenv)
-end
+
+# EXSQL
+set -x EXSQL_HOME ~/src/github.com/plaidev/exsql
+export PATH="$PATH:$EXSQL_HOME/target/debug"
+# set -x EXSQL_BQ_RUNNING_PROJECT PROJECT_NAME
 
 # dont show greeting
 set fish_greeting
@@ -24,7 +25,6 @@ set -g fish_user_paths $HOME/.cargo/bin
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH  $PYENV_ROOT/bin $PATH
-fish_add_path ~/.rustup/toolchains/1.62.0-x86_64-apple-darwin/bin
 
 # pyenv init - | source
 
@@ -38,11 +38,6 @@ set -x GOPATH $HOME
 # Google Cloud SDK
 # source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
-# starship
-starship init fish | source
-
-# zoxide
-zoxide init fish | source
 
 # fzf
 set -U FZF_LEGACY_KEYBINDINGS 0
@@ -72,4 +67,16 @@ end
 
 fish_add_path /usr/local/opt/mysql@5.7/bin
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; test -f /Users/unvalley/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /Users/unvalley/.ghcup/bin $PATH # ghcup-env
+
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    eval (/opt/homebrew/bin/brew shellenv)
+    # starship
+    starship init fish | source
+    # zoxide
+    zoxide init fish | source
+end
 
