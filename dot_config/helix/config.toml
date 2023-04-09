@@ -7,10 +7,6 @@ cursorline = true
 auto-format = true
 bufferline = "multiple"
 
-[keys.insert]
-j = { k = "normal_mode" }
-"C-c" = "normal_mode"
-
 [editor.lsp]
 display-messages = true
 
@@ -116,7 +112,9 @@ g = { g = ["select_mode", "extend_to_line_bounds", "goto_file_start", "extend_to
 
 [keys.insert]
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
+C-c = "normal_mode"
 esc = ["collapse_selection", "normal_mode"]
+j = { k = "normal_mode" }
 
 [keys.select]
 # Muscle memory
