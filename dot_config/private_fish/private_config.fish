@@ -16,11 +16,12 @@ set fish_greeting
 set -g fish_user_paths $HOME/.cargo/bin
 fish_add_path ~/.rustup/toolchains/stable-x86_64-apple-darwin/bin
 fish_add_path ~/.rustup/toolchains/stable-aarch64-apple-darwin/bin
+fish_add_path ~/.rustup/toolchains/nightly-aarch64-apple-darwin/bin
 
 # Go
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
+eval (goenv init -)
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
