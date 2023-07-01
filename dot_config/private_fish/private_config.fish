@@ -41,11 +41,15 @@ end
 
 # KEY_BINDINGS
 function fish_user_key_bindings
-    bind \co __fzf_open --editor
-    bind \cr __fzf_reverse_isearch
-    bind \ch __fzf_reverse_isearch
-    bind \c] __ghq_repository_search
-    bind \cs __fzf_cd
+    for mode in insert default visual
+        fish_default_key_bindings -M $mode
+        bind -M $mode \co __fzf_open --editor
+        bind -M $mode \cr __fzf_reverse_isearch
+        bind -M $mode \ch __fzf_reverse_isearch
+        bind -M $mode \c] __ghq_repository_search
+        bind -M $mode \cs __fzf_cd
+    end
+    fish_vi_key_bindings --no-erase
 end
 
 # Extends `cd` command to list directory contents after changing directory
