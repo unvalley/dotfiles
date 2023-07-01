@@ -1,27 +1,51 @@
-alias cat='bat'
-alias grep='rg'
-alias zel='zellij'
-alias c='code'
+function check_installed
+    command -v $argv[1] >/dev/null
+end
 
-alias e='exa --icons --git'
-alias l=e
-alias ls=e
-alias ea='exa -a --icons --git'
-alias la=ea
-alias ee='exa -aahl --icons --git'
-alias ll=ee
-alias et='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
-alias lt=et
-alias eta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
-alias tree=eta
-alias lta=eta
-alias l='clear && ls'
+if check_installed bat
+    alias cat 'bat'
+end
 
-alias rm=trash-put
-alias now='date "+%Y-%m-%d %H:%M:%S" | pbcopy'
+if check_installed rg
+    alias grep 'rg'
+end
 
-# fzf
-alias vif='vim $(fzf)'
+if check_installed zellij
+    alias zel 'zellij'
+end
+
+if check_installed code
+    alias c 'code'
+end
+
+if check_installed exa
+    alias e 'exa --icons --git'
+    alias l 'clear && ls'
+    alias ls 'exa --icons --git'
+    alias ea 'exa -a --icons --git'
+    alias la 'exa -a --icons --git'
+    alias ee 'exa -aahl --icons --git'
+    alias ll 'exa -aahl --icons --git'
+    alias et 'exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+    alias lt 'exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+    alias eta 'exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
+    alias tree 'exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
+    alias lta 'exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
+end
+
+if check_installed trash-put
+    alias rm 'trash-put'
+end
+
+if check_installed date
+    alias now 'date "+%Y-%m-%d %H:%M:%S" | pbcopy'
+end
+
+if check_installed fzf
+    alias f 'fzf'
+    alias vif 'vim $(fzf)'
+end
+
 
 # Node.js
 alias ni="npm install"
@@ -41,34 +65,23 @@ alias nioff="npm install --offline"
 
 # Git
 alias g='git'
+alias gi='git init'
 alias ga='git add'
 alias gaa='git add .'
 alias gaaa='git add -A'
-alias gbd='git branch -d'
-
+alias gb='git branch'
 alias gc='git commit'
 alias gcm='git commit -m'
-
 alias gco='git checkout'
-alias gcob='git checkout -b'
-
-alias gd='git diff'
-alias gdh='git diff HEAD'
-alias gi='git init'
-
+alias gdf='git diff'
+alias gdfh='git diff HEAD'
 alias gl='git log'
 alias glg='git log --graph --oneline --decorate --all'
 alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
-
 alias gm='git merge --no-ff'
 alias gpl='git pull origin'
 alias gpo='git push origin'
-
 alias gst='git status'
 alias gss='git status -s'
-alias gstl='git stash list'
-alias gstp='git stash pop'
-alias gstd='git stash drop'
-alias gclean-local='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
 alias tasks='gh issue list --repo unvalley/projects'
 
