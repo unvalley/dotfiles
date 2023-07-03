@@ -1,74 +1,63 @@
-alias cat='bat'
-alias grep='rg'
-alias zel='zellij'
-alias c='code'
+function is_installed
+    command -v $argv[1] >/dev/null
+end
 
-alias e='exa --icons --git'
-alias l=e
-alias ls=e
-alias ea='exa -a --icons --git'
-alias la=ea
-alias ee='exa -aahl --icons --git'
-alias ll=ee
-alias et='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
-alias lt=et
-alias eta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
-alias tree=eta
-alias lta=eta
-alias l='clear && ls'
-
-alias rm=trash-put
-alias now='date "+%Y-%m-%d %H:%M:%S" | pbcopy'
-
-# fzf
-alias vif='vim $(fzf)'
+abbr -a c 'bat'
+abbr -a cat 'bat'
+abbr -a g 'rg'
+abbr -a z 'zellij'
+abbr -a zel 'zellij'
+abbr -a e 'exa --icons --git'
+abbr -a l 'clear; and ls'
+abbr -a ls 'exa --icons --git'
+abbr -a ea 'exa -a --icons --git'
+abbr -a la 'exa -a --icons --git'
+abbr -a ee 'exa -aahl --icons --git'
+abbr -a ll 'exa -aahl --icons --git'
+abbr -a et 'exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+abbr -a lt 'exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+abbr -a eta 'exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
+abbr -a t 'exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
+abbr -a lta 'exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
+abbr -a rm 'trash-put'
+abbr -a n 'date "+%Y-%m-%d %H:%M:%S" | pbcopy'
+abbr -a f 'fzf'
 
 # Node.js
-alias ni="npm install"
-alias nrc="npm run local"
-alias nrcl="npm run local:loose"
-alias nrs="npm run start -s --"
-alias nrb="npm run build -s --"
-alias nrd="npm run dev"
-alias nrt="npm run test -s --"
-alias nrtw="npm run test:watch -s --"
-alias nrv="npm run validate -s --"
-alias rmn="rm -rf node_modules"
-alias flush-npm="rm -rf node_modules && npm i && say NPM is done"
-alias nicache="npm install --prefer-offline"
-alias nioff="npm install --offline"
+abbr -a ni "npm install"
+abbr -a nrc "npm run local"
+abbr -a nrcl "npm run local:loose"
+abbr -a nrs "npm run start -s --"
+abbr -a nrb "npm run build -s --"
+abbr -a nrd "npm run dev"
+abbr -a nrt "npm run test -s --"
+abbr -a nrtw "npm run test:watch -s --"
+abbr -a nrv "npm run validate -s --"
+abbr -a rmn "rm -rf node_modules"
+abbr -a fn "rm -rf node_modules; and npm i; and say NPM is done"
+abbr -a nic "npm install --prefer-offline"
+abbr -a nio "npm install --offline"
 
 
 # Git
-alias g='git'
-alias ga='git add'
-alias gaa='git add .'
-alias gaaa='git add -A'
-alias gbd='git branch -d'
-
-alias gc='git commit'
-alias gcm='git commit -m'
-
-alias gco='git checkout'
-alias gcob='git checkout -b'
-
-alias gd='git diff'
-alias gdh='git diff HEAD'
-alias gi='git init'
-
-alias gl='git log'
-alias glg='git log --graph --oneline --decorate --all'
-alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
-
-alias gm='git merge --no-ff'
-alias gpl='git pull origin'
-alias gpo='git push origin'
-
-alias gst='git status'
-alias gss='git status -s'
-alias gstl='git stash list'
-alias gstp='git stash pop'
-alias gstd='git stash drop'
-alias gclean-local='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
-alias tasks='gh issue list --repo unvalley/projects'
+abbr -a g 'git'
+abbr -a gi 'git init'
+abbr -a ga 'git add'
+abbr -a gaa 'git add .'
+abbr -a gaaa 'git add -A'
+abbr -a gb 'git branch'
+abbr -a gc 'git commit'
+abbr -a gcm 'git commit -m'
+abbr -a gco 'git checkout'
+abbr -a gdf 'git diff'
+abbr -a gdfh 'git diff HEAD'
+abbr -a gl 'git log'
+abbr -a glg 'git log --graph --oneline --decorate --all'
+abbr -a gld 'git log --pretty=format:"%h %ad %s" --date=short --all'
+abbr -a gm 'git merge --no-ff'
+abbr -a gpl 'git pull origin'
+abbr -a gpo 'git push origin'
+abbr -a gst 'git status'
+abbr -a gss 'git status -s'
+abbr -a tasks 'gh issue list --repo unvalley/projects'
 
