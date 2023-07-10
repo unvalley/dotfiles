@@ -70,3 +70,4 @@ if status is-interactive
     zoxide init fish | source
 end
 
+set -Ux JAVA_HOME (/usr/libexec/java_home)
