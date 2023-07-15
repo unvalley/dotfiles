@@ -281,7 +281,6 @@
     },
     "npm.keybindingsChangedWarningShown": true,
     "prettier.requireConfig": false,
-    //   "python.linting.mypyEnabled": true,
     "python.pythonPath": "/Users/unvalley/.anyenv/envs/pyenv/versions/anaconda3-2021.05/bin/python",
     "react-native-tools.showUserTips": false,
     "redhat.telemetry.enabled": true,
@@ -308,7 +307,6 @@
     "sortJSON.orderOverride": [
         "sortJSON.orderOverride"
     ],
-    "sync.gist": "111d72ff780ed333904cd19db836cf5d",
     "sync.removeExtensions": true,
     "tabnine.experimentalAutoImports": true,
     "terminal.integrated.copyOnSelection": true,
@@ -323,16 +321,12 @@
     "terminal.integrated.rightClickBehavior": "paste",
     "todo-tree.tree.showScanModeButton": false,
     "update.mode": "manual",
-    /**
-        * Vim Settings
-        */
     "vim.autoSwitchInputMethod.enable": true,
     "vim.debug.silent": true,
     "vim.easymotion": true,
     "vim.easymotionKeys": "sdfghjkl",
     "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)",
     "vim.highlightedyank.duration": 150,
-    // yank
     "vim.highlightedyank.enable": true,
     "vim.hlsearch": true,
     "vim.leader": "<space>",
@@ -388,10 +382,7 @@
         }
     ],
     "vim.searchHighlightColor": "rgba(255, 235, 60, 0.4)",
-    // sに続けて二文字キー入力で，その二文字に移動
-    // ref: https://bit.ly/3s9iP7H
     "vim.sneak": true,
-    // statusBar color-settings (vim-airline) do I need this?
     "vim.statusBarColorControl": false,
     "vim.statusBarColors.commandlineinprogress": [
         "#818596",
