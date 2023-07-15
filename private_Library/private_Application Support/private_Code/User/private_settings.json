@@ -255,9 +255,6 @@
     "indentRainbow.excludedLanguages": [
         "vue"
     ],
-    // -------------------------------------
-    // leetcode
-    // -------------------------------------
     "leetcode.defaultLanguage": "rust",
     "leetcode.filePath": {
         "default": {
@@ -265,8 +262,6 @@
             "folder": ""
         }
     },
-    "leetcode.workspaceFolder": "/Users/hiroki.ihoriya/src/github.com/unvalley/leetcode",
-    "metals.javaHome": "/Users/unvalley/.jabba/jdk/adopt@1.11.0-11/Contents/Home",
     "mssql.connections": [
         {
             "database": "{{put-database-name-here}}",
