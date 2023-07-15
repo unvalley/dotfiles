@@ -7,7 +7,7 @@ set fish_greeting
 export PATH="$PATH:$HOME/bin"
 
 # EXSQL
-set -x EXSQL_HOME ~/src/github.com/plaidev/exsql
+set -x EXSQL_HOME ~/ghq/github.com/plaidev/exsql
 export PATH="$PATH:$EXSQL_HOME/target/debug"
 # set -x EXSQL_BQ_RUNNING_PROJECT PROJECT_NAME
 
