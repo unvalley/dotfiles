@@ -464,8 +464,6 @@
     ],
     "vim.visualstar": true,
     "vim.whichwrap": "h,l,<,>,[,]",
-    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/unvalley/.config/nvim/init.vim",
     "wallaby.startViewStatusBar": false,
     "window.openFilesInNewWindow": "off",
     "workbench.colorCustomizations": {
