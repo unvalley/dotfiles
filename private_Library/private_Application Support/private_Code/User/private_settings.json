@@ -275,8 +275,6 @@
     },
     "npm.keybindingsChangedWarningShown": true,
     "prettier.requireConfig": false,
-    "python.pythonPath": "/Users/unvalley/.anyenv/envs/pyenv/versions/anaconda3-2021.05/bin/python",
-    "react-native-tools.showUserTips": false,
     "redhat.telemetry.enabled": true,
     "remote.onstartup": true,
     "screencastMode.onlyKeyboardShortcuts": true,
