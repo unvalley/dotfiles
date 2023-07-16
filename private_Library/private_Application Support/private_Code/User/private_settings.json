@@ -1,4 +1,7 @@
 {
+    "sortJSON.orderOverride": [
+        "sortJSON.orderOverride"
+    ],
     "[csv]": {
         "editor.wordWrap": "off"
     },
@@ -9,15 +12,9 @@
         "deno.inlayHints.parameterTypes.enabled": true,
         "deno.inlayHints.variableTypes.enabled": true
     },
-    "[go]": {
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        },
-        "editor.formatOnSave": true,
-        "editor.insertSpaces": false
-    },
+    "[go]": {},
     "[haskell]": {
-        "editor.tabSize": 2
+        "editor.defaultFormatter": "haskell.haskell"
     },
     "[javascript]": {
         "editor.codeActionsOnSave": {
@@ -32,27 +29,31 @@
     },
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
         "editor.wordWrap": "on",
         "files.trimTrailingWhitespace": false
     },
     "[prisma]": {
-        "editor.defaultFormatter": "Prisma.prisma",
-        "editor.formatOnSave": false
+        "editor.defaultFormatter": "Prisma.prisma"
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
     "[rust]": {
         "editor.defaultFormatter": "rust-lang.rust-analyzer",
-        "editor.formatOnSave": true
+        "rust-analyzer.checkOnSave.command": "clippy",
+        "rust-analyzer.linkedProjects": [
+            "Cargo.toml",
+            "clippy_dev/Cargo.toml",
+            "lintcheck/Cargo.toml"
+        ],
+        "rust-analyzer.procMacro.enable": false,
+        "rust-analyzer.rustc.source": "discover"
     },
     "[scala]": {
         "editor.tabSize": 2
     },
     "[sql]": {
-        "editor.defaultFormatter": "mtxr.sqltools",
-        "editor.formatOnSave": false
+        "editor.defaultFormatter": "mtxr.sqltools"
     },
     "[terraform]": {
         "editor.defaultFormatter": "hashicorp.terraform"
@@ -69,8 +70,7 @@
         },
         "editor.defaultFormatter": "rome.rome",
         "editor.suggest.showKeywords": true,
-        "editor.suggestSelection": "recentlyUsed",
-        "editor.tabSize": 2
+        "editor.suggestSelection": "recentlyUsed"
     },
     "[typescriptreact]": {
         "editor.autoClosingBrackets": "languageDefined",
@@ -80,12 +80,10 @@
             "source.organizeImports": false
         },
         "editor.suggest.showKeywords": false,
-        "editor.suggestSelection": "recentlyUsed",
-        "editor.tabSize": 2
+        "editor.suggestSelection": "recentlyUsed"
     },
     "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "auto-close-tag.activationOnLanguage": [
         "xml",
@@ -144,6 +142,7 @@
     "color-highlight.languages": [
         "*"
     ],
+    "debug.allowBreakpointsEverywhere": true,
     "debug.inlineValues": "on",
     "debug.internalConsoleOptions": "openOnSessionStart",
     "debug.openDebug": "openOnSessionStart",
@@ -159,7 +158,7 @@
     "editor.fontLigatures": false,
     "editor.fontSize": 16,
     "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.formatOnType": false,
     "editor.inlineSuggest.enabled": true,
     "editor.insertSpaces": true,
@@ -280,14 +279,6 @@
     "react-native-tools.showUserTips": false,
     "redhat.telemetry.enabled": true,
     "remote.onstartup": true,
-    "rust-analyzer.checkOnSave.command": "clippy",
-    "rust-analyzer.linkedProjects": [
-        "Cargo.toml",
-        "clippy_dev/Cargo.toml",
-        "lintcheck/Cargo.toml"
-    ],
-    "rust-analyzer.procMacro.enable": false,
-    "rust-analyzer.rustc.source": "discover",
     "screencastMode.onlyKeyboardShortcuts": true,
     "search.exclude": {
         "**/*.code-search": true,
@@ -299,9 +290,6 @@
         "/node_modules": true,
         "/target": true
     },
-    "sortJSON.orderOverride": [
-        "sortJSON.orderOverride"
-    ],
     "sync.removeExtensions": true,
     "tabnine.experimentalAutoImports": true,
     "terminal.integrated.copyOnSelection": true,
@@ -320,8 +308,9 @@
     "vim.debug.silent": true,
     "vim.easymotion": true,
     "vim.easymotionKeys": "sdfghjkl",
+    "vim.foldfix": true,
     "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)",
-    "vim.highlightedyank.duration": 150,
+    "vim.highlightedyank.duration": 100,
     "vim.highlightedyank.enable": true,
     "vim.hlsearch": true,
     "vim.leader": "<space>",
@@ -451,6 +440,7 @@
     "vim.visualstar": true,
     "vim.whichwrap": "h,l,<,>,[,]",
     "wallaby.startViewStatusBar": false,
+    "window.commandCenter": true,
     "window.openFilesInNewWindow": "off",
     "workbench.colorCustomizations": {
         "statusBar.background": "#161821",
