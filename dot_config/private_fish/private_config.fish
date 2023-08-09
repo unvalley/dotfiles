@@ -25,9 +25,14 @@ fish_add_path $GOPATH/bin
 set -x PYENV_ROOT $HOME/.pyenv
 fish_add_path $PYENV_ROOT/bin
 
+set -gx JAVA_HOME (/usr/libexec/java_home)
+set -gx AWS_DEFAULT_REGION ap-northeast-1
+
 # volta
-set -gx VOLTA_HOME $HOME/.volta
-set -gx $VOLTA_HOME/bin:$PATH
+set -gx VOLTA_HOME "$HOME/.volta"
+if test -d $VOLTA_HOME/bin
+	fish_add_path $VOLTA_HOME/bin
+end
 
 
 # Google Cloud SDK
@@ -71,5 +76,3 @@ if status is-interactive
     zoxide init fish | source
 end
 
-set -gx JAVA_HOME (/usr/libexec/java_home)
-set -gx AWS_DEFAULT_REGION ap-northeast-1
