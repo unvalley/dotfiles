@@ -153,5 +153,10 @@
         "key": "f11",
         "command": "workbench.action.navigateBack",
         "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "shift+k",
+        "command": "editor.action.showHover",
+        "when": "editorFocus && vim.mode == 'Normal'"
     }
 ]
