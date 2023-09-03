@@ -7,7 +7,11 @@ set -x GIT_MERGE_AUTOEDIT no
 
 # EXSQL
 set -x EXSQL_HOME ~/ghq/github.com/plaidev/exsql
+set -x EXSQL_BQ_RUNNING_PROJECT exsql-sandbox
+set -x GOOGLE_APPLICATION_CREDENTIALS ~/.google-cloud/service-account.json
+
 fish_add_path $EXSQL_HOME/target/debug
+
 
 # Rust
 fish_add_path ~/.rustup/toolchains/stable-x86_64-apple-darwin/bin
@@ -27,6 +31,11 @@ fish_add_path $PYENV_ROOT/bin
 
 # Google Cloud SDK
 set -x CLOUDSDK_PYTHON python3
+
+# LLVM
+#fish_add_path /opt/homebrew/opt/llvm/bin
+#set -gx LDFLAGS "-L/opt/homebrew/opt/llvm/lib"
+#set -gx CPPFLAGS "-I/opt/homebrew/opt/llvm/include"
 
 # fzf
 set -U FZF_LEGACY_KEYBINDINGS 0
@@ -66,4 +75,4 @@ if status is-interactive
     zoxide init fish | source
 end
 
-set -x JAVA_HOME (/usr/libexec/java_home)
+#set -x JAVA_HOME (/usr/libexec/java_home)

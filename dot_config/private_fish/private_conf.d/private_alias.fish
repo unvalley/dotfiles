@@ -23,6 +23,9 @@ abbr -a rm 'trash-put'
 abbr -a n 'date "+%Y-%m-%d %H:%M:%S" | pbcopy'
 abbr -a f 'fzf'
 
+# Rust
+abbr -a car 'cargo'
+
 # Node.js
 abbr -a ni "npm install"
 abbr -a nrc "npm run local"
@@ -37,7 +40,6 @@ abbr -a rmn "rm -rf node_modules"
 abbr -a fn "rm -rf node_modules; and npm i; and say NPM is done"
 abbr -a nic "npm install --prefer-offline"
 abbr -a nio "npm install --offline"
-
 
 # Git
 abbr -a g 'git'
