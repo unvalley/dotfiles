@@ -1,487 +1,513 @@
 {
-    "sortJSON.orderOverride": [
-        "sortJSON.orderOverride"
-    ],
-    "[csv]": {
-        "editor.wordWrap": "off"
-    },
-    "[deno]": {
-        "deno.enable": true,
-        "deno.inlayHints.enumMemberValues.enabled": true,
-        "deno.inlayHints.functionLikeReturnTypes.enabled": true,
-        "deno.inlayHints.parameterTypes.enabled": true,
-        "deno.inlayHints.variableTypes.enabled": true
-    },
-    "[go]": {},
-    "[haskell]": {
-        "editor.defaultFormatter": "haskell.haskell"
-    },
-    "[javascript]": {
-        "editor.codeActionsOnSave": {
-            "source.addMissingImports": false,
-            "source.fixAll.eslint": true,
-            "source.organizeImports": true
-        },
-        "editor.defaultFormatter": "rome.rome"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.wordWrap": "on",
-        "files.trimTrailingWhitespace": false
-    },
-    "[prisma]": {
-        "editor.defaultFormatter": "Prisma.prisma"
-    },
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
-    "[rust]": {
-        "editor.defaultFormatter": "rust-lang.rust-analyzer",
-        "rust-analyzer.checkOnSave.command": "clippy",
-        "rust-analyzer.linkedProjects": [
-            "Cargo.toml",
-            "clippy_dev/Cargo.toml",
-            "lintcheck/Cargo.toml"
-        ],
-        "rust-analyzer.procMacro.enable": false,
-        "rust-analyzer.rustc.source": "discover"
-    },
-    "[scala]": {
-        "editor.tabSize": 2
-    },
-    "[sql]": {
-        "editor.defaultFormatter": "mtxr.sqltools"
-    },
-    "[terraform]": {
-        "editor.defaultFormatter": "hashicorp.terraform"
-    },
-    "[tsv]": {
-        "editor.wordWrap": "off"
-    },
-    "[typescript]": {
-        "editor.autoClosingBrackets": "always",
-        "editor.codeActionsOnSave": {
-            "source.addMissingImports": true,
-            "source.fixAll.eslint": true,
-            "source.organizeImports": false
-        },
-        "editor.defaultFormatter": "rome.rome",
-        "editor.suggest.showKeywords": true,
-        "editor.suggestSelection": "recentlyUsed"
-    },
-    "[typescriptreact]": {
-        "editor.autoClosingBrackets": "languageDefined",
-        "editor.codeActionsOnSave": {
-            "source.addMissingImports": true,
-            "source.fixAll.eslint": true,
-            "source.organizeImports": false
-        },
-        "editor.suggest.showKeywords": false,
-        "editor.suggestSelection": "recentlyUsed"
-    },
-    "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "auto-close-tag.activationOnLanguage": [
-        "xml",
-        "php",
-        "blade",
-        "ejs",
-        "jinja",
-        "javascriptreact",
-        "typescriptreact",
-        "plaintext",
-        "vue",
-        "liquid",
-        "erb",
-        "lang-cfml",
-        "cfml",
-        "HTML (Eex)"
-    ],
-    "aws.samcli.location": "/usr/local/bin/sam",
-    "aws.telemetry": false,
-    "bracketPairColorizer.depreciation-notice": false,
-    "cSpell.userWords": [
-        "Apks",
-        "Appolo",
-        "Bpaf",
-        "chronotc",
-        "DBIO",
-        "deno",
-        "denoland",
-        "dtos",
-        "gcloud",
-        "Iframe",
-        "Invisibles",
-        "Jdbc",
-        "losslessly",
-        "luxon",
-        "millis",
-        "mrkdwn",
-        "myshoes",
-        "Newtypes",
-        "Nodata",
-        "Nonoctal",
-        "Onwer",
-        "peekable",
-        "pico",
-        "protobuf",
-        "redeclaration",
-        "rfind",
-        "rustc",
-        "scalafmt",
-        "schemars",
-        "Tranzact",
-        "UNNEST",
-        "unvalley",
-        "Usecase"
-    ],
-    "color-highlight.languages": [
-        "*"
-    ],
-    "debug.allowBreakpointsEverywhere": true,
-    "debug.inlineValues": "on",
-    "debug.internalConsoleOptions": "openOnSessionStart",
-    "debug.openDebug": "openOnSessionStart",
-    "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.accessibilitySupport": "off",
-    "editor.autoClosingBrackets": "always",
-    "editor.autoClosingQuotes": "always",
-    "editor.autoSurround": "languageDefined",
-    "editor.cursorSmoothCaretAnimation": "off",
-    "editor.cursorStyle": "line",
-    "editor.detectIndentation": false,
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": false,
-    "editor.fontSize": 16,
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": true,
-    "editor.formatOnType": false,
-    "editor.inlineSuggest.enabled": true,
-    "editor.insertSpaces": true,
-    "editor.lightbulb.enabled": false,
-    "editor.lineNumbers": "on",
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.parameterHints.enabled": true,
-    "editor.renderWhitespace": "all",
-    "editor.rulers": [
-        80
-    ],
-    "editor.scrollBeyondLastLine": false,
-    "editor.showFoldingControls": "always",
-    "editor.snippetSuggestions": "top",
-    "editor.stickyScroll.enabled": true,
-    "editor.suggest.localityBonus": true,
-    "editor.suggestSelection": "first",
-    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-    "editor.wordWrap": "off",
-    "emmet.triggerExpansionOnTab": true,
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact"
-    ],
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "exsql.inMemory.executor.cache_all_fields.enabled": true,
-    "exsql.inMemory.executor.enabled": true,
-    "files.associations": {
-        "*.md": "mdx",
-        "*.tsx": "typescriptreact",
-        "*.vue": "vue"
-    },
-    "files.autoSave": "onFocusChange",
-    "files.eol": "\n",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.factorypath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "/.git": true,
-        "/node_modules": true,
-        "/node_modules/": true,
-        "/target/": true,
-        "USE_GITIGNORE": true
-    },
-    "files.trimTrailingWhitespace": true,
-    "files.watcherExclude": {
-        "**/.ammonite": true,
-        "**/.bloop": true,
-        "**/.metals": true,
-        "/node_modules": true,
-        "/target": true
-    },
-    "git.autofetch": true,
-    "github.copilot.enable": {
-        "*": true,
-        "markdown": true,
-        "plaintext": true,
-        "rust": true,
-        "typescript": true,
-        "yaml": true
-    },
-    "githubPullRequests.pullBranch": "never",
-    "gitlens.codeLens.authors.command": false,
-    "gitlens.codeLens.authors.enabled": false,
-    "gitlens.hovers.currentLine.over": "line",
-    "go.autocompleteUnimportedPackages": true,
-    "go.docsTool": "godoc",
-    "go.formatFlags": [
-        "-w"
-    ],
-    "go.formatTool": "goimports",
-    "go.inlayHints.assignVariableTypes": true,
-    "go.languageServerExperimentalFeatures": {
-        "diagnostics": true
-    },
-    "go.lintFlags": [
-        "--enable-all",
-        "--new"
-    ],
-    "go.toolsManagement.autoUpdate": true,
-    "go.useLanguageServer": true,
-    "gopls": {
-        "usePlaceholders": true
-    },
-    "haskell.manageHLS": "GHCup",
-    "html.format.contentUnformatted": "pre, code, textarea, title, h1, h2, h3, h4, h5, h6, p",
-    "html.format.extraLiners": "",
-    "html.format.unformatted": null,
-    "indentRainbow.excludedLanguages": [
-        "vue"
-    ],
-    "leetcode.defaultLanguage": "rust",
-    "leetcode.filePath": {
-        "default": {
-            "filename": "${id}.${kebab-case-name}.${ext}",
-            "folder": ""
-        }
-    },
-    "mssql.connections": [
-        {
-            "database": "{{put-database-name-here}}",
-            "password": "",
-            "server": "{{put-server-name-here}}",
-            "user": "{{put-username-here}}"
-        }
-    ],
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "npm.keybindingsChangedWarningShown": true,
-    "prettier.requireConfig": false,
-    "redhat.telemetry.enabled": true,
-    "remote.onstartup": true,
-    "screencastMode.onlyKeyboardShortcuts": true,
-    "search.exclude": {
-        "**/*.code-search": true,
-        "**/.build": true,
-        "**/.gh-pages": true,
-        "**/bower_components": true,
-        "**/dist": true,
-        "**/node_modules": true,
-        "/node_modules": true,
-        "/target": true
-    },
-    "sync.removeExtensions": true,
-    "tabnine.experimentalAutoImports": true,
-    "terminal.integrated.copyOnSelection": true,
-    "terminal.integrated.defaultProfile.osx": "fish",
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "terminal.integrated.env.osx": {
-        "FIG_NEW_SESSION": "1"
-    },
-    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-    "terminal.integrated.fontSize": 15,
-    "terminal.integrated.inheritEnv": false,
-    "terminal.integrated.rightClickBehavior": "paste",
-    "todo-tree.tree.showScanModeButton": false,
-    "update.mode": "manual",
-    "vim.autoSwitchInputMethod.enable": true,
-    "vim.debug.silent": true,
-    "vim.easymotion": true,
-    "vim.easymotionKeys": "sdfghjkl",
-    "vim.foldfix": true,
-    "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)",
-    "vim.highlightedyank.duration": 100,
-    "vim.highlightedyank.enable": true,
-    "vim.hlsearch": true,
-    "vim.leader": "<space>",
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "after": [
-                "leader",
-                "leader",
-                "leader",
-                "b",
-                "d",
-                "w"
-            ],
-            "before": [
-                "shift+f"
-            ]
-        },
-        {
-            "before": [
-                "alt+s"
-            ],
-            "commands": [
-                ":split"
-            ]
-        },
-        {
-            "before": [
-                "alt+v"
-            ],
-            "commands": [
-                ":vsplit"
-            ]
-        },
-        {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "vspacecode.space"
-            ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "args": "m",
-                    "command": "whichkey.triggerKey"
-                }
-            ]
-        }
-    ],
-    "vim.searchHighlightColor": "rgba(255, 235, 60, 0.4)",
-    "vim.sneak": true,
-    "vim.statusBarColorControl": false,
-    "vim.statusBarColors.commandlineinprogress": [
-        "#818596",
-        "#161821"
-    ],
-    "vim.statusBarColors.easymotioninputmode": [
-        "#818596",
-        "#161821"
-    ],
-    "vim.statusBarColors.easymotionmode": [
-        "#818596",
-        "#161821"
-    ],
-    "vim.statusBarColors.insert": [
-        "#84A0C6",
-        "#161821"
-    ],
-    "vim.statusBarColors.normal": [
-        "#161821",
-        "#818596"
-    ],
-    "vim.statusBarColors.replace": [
-        "#E2A478",
-        "#161821"
-    ],
-    "vim.statusBarColors.searchinprogressmode": [
-        "#818596",
-        "#161821"
-    ],
-    "vim.statusBarColors.surroundinputmode": [
-        "#818596",
-        "#161821"
-    ],
-    "vim.statusBarColors.visual": [
-        "#B4BE82",
-        "#161821"
-    ],
-    "vim.statusBarColors.visualblock": [
-        "#B4BE82",
-        "#161821"
-    ],
-    "vim.statusBarColors.visualline": [
-        "#B4BE82",
-        "#161821"
-    ],
-    "vim.surround": true,
-    "vim.useCtrlKeys": true,
-    "vim.useSystemClipboard": true,
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "vspacecode.space"
-            ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "args": "m",
-                    "command": "whichkey.triggerKey"
-                }
-            ]
-        }
-    ],
-    "vim.visualstar": true,
-    "vim.whichwrap": "h,l,<,>,[,]",
-    "wallaby.startViewStatusBar": false,
-    "window.commandCenter": true,
-    "window.openFilesInNewWindow": "off",
-    "workbench.colorCustomizations": {
-        "statusBar.background": "#161821",
-        "statusBar.debuggingBackground": "#161821",
-        "statusBar.debuggingForeground": "#818596",
-        "statusBar.foreground": "#818596",
-        "statusBar.noFolderBackground": "#161821"
-    },
-    "workbench.colorTheme": "GitHub Dark Default",
-    "workbench.editor.showTabs": true,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.tree.renderIndentGuides": "always",
-    "yaml.customTags": [
-        "!And",
-        "!And sequence",
-        "!If",
-        "!If sequence",
-        "!Not",
-        "!Not sequence",
-        "!Equals",
-        "!Equals sequence",
-        "!Or",
-        "!Or sequence",
-        "!FindInMap",
-        "!FindInMap sequence",
-        "!Base64",
-        "!Join",
-        "!Join sequence",
-        "!Cidr",
-        "!Ref",
-        "!Sub",
-        "!Sub sequence",
-        "!GetAtt",
-        "!GetAZs",
-        "!ImportValue",
-        "!ImportValue sequence",
-        "!Select",
-        "!Select sequence",
-        "!Split",
-        "!Split sequence"
-    ],
-    "yaml.schemas": {}
+	"sortJSON.orderOverride": [
+		"sortJSON.orderOverride"
+	],
+	"[csv]": {
+		"editor.wordWrap": "off"
+	},
+	"[deno]": {
+		"deno.enable": true,
+		"deno.inlayHints.enumMemberValues.enabled": true,
+		"deno.inlayHints.functionLikeReturnTypes.enabled": true,
+		"deno.inlayHints.parameterTypes.enabled": true,
+		"deno.inlayHints.variableTypes.enabled": true
+	},
+	"[go]": {},
+	"[haskell]": {
+		"editor.defaultFormatter": "haskell.haskell"
+	},
+	"[javascript]": {
+		"editor.codeActionsOnSave": {
+			"source.addMissingImports": false,
+			"source.fixAll.eslint": true,
+			"source.organizeImports": true
+		},
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"[json]": {
+		"editor.formatOnSave": false
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[markdown]": {
+		"editor.formatOnSave": false,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.wordWrap": "on",
+		"editor.trimAutoWhitespace": false,
+		"files.trimTrailingWhitespace": false
+	},
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
+	},
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.python"
+	},
+	"[rust]": {
+		"editor.defaultFormatter": "rust-lang.rust-analyzer",
+		"rust-analyzer.checkOnSave.command": "clippy",
+		"rust-analyzer.linkedProjects": [
+			"Cargo.toml",
+			"clippy_dev/Cargo.toml",
+			"lintcheck/Cargo.toml"
+		],
+		"rust-analyzer.procMacro.enable": false,
+		"rust-analyzer.rustc.source": "discover"
+	},
+	"[scala]": {
+		"editor.tabSize": 2
+	},
+	"[sql]": {
+		"editor.defaultFormatter": "mtxr.sqltools"
+	},
+	"[terraform]": {
+		"editor.defaultFormatter": "hashicorp.terraform"
+	},
+	"[tsv]": {
+		"editor.wordWrap": "off"
+	},
+	"[typescript]": {
+		"editor.autoClosingBrackets": "always",
+		"editor.codeActionsOnSave": {
+			"source.addMissingImports": true,
+			"source.fixAll.eslint": true,
+			"source.organizeImports": false
+		},
+		"editor.defaultFormatter": "rome.rome",
+		"editor.suggest.showKeywords": true,
+		"editor.suggestSelection": "recentlyUsed"
+	},
+	"[typescriptreact]": {
+		"editor.autoClosingBrackets": "languageDefined",
+		"editor.codeActionsOnSave": {
+			"source.addMissingImports": true,
+			"source.fixAll.eslint": true,
+			"source.organizeImports": false
+		},
+		"editor.suggest.showKeywords": false,
+		"editor.suggestSelection": "recentlyUsed"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"auto-close-tag.activationOnLanguage": [
+		"xml",
+		"php",
+		"blade",
+		"ejs",
+		"jinja",
+		"javascriptreact",
+		"typescriptreact",
+		"plaintext",
+		"vue",
+		"liquid",
+		"erb",
+		"lang-cfml",
+		"cfml",
+		"HTML (Eex)"
+	],
+	"aws.samcli.location": "/usr/local/bin/sam",
+	"aws.telemetry": false,
+	"bracketPairColorizer.depreciation-notice": false,
+	"cSpell.userWords": [
+		"Apks",
+		"Appolo",
+		"Bignumeric",
+		"blockquote",
+		"Bpaf",
+		"chronotc",
+		"COUNTIF",
+		"datatypes",
+		"DBIO",
+		"decompile",
+		"deno",
+		"denoland",
+		"Deque",
+		"dotd",
+		"dtos",
+		"exsql",
+		"gcloud",
+		"grammer",
+		"hasher",
+		"Iframe",
+		"instantiator",
+		"Invisibles",
+		"Itertools",
+		"Jdbc",
+		"lalrpop",
+		"losslessly",
+		"luxon",
+		"millis",
+		"mrkdwn",
+		"myshoes",
+		"Newtypes",
+		"Nodata",
+		"Nonoctal",
+		"Onwer",
+		"peekable",
+		"pico",
+		"protobuf",
+		"QUANTILES",
+		"redeclaration",
+		"rfind",
+		"rustc",
+		"scalafmt",
+		"schemars",
+		"subquery",
+		"Tranzact",
+		"typst",
+		"UNNEST",
+		"unvalley",
+		"Usecase"
+	],
+	"color-highlight.languages": [
+		"*"
+	],
+	"debug.allowBreakpointsEverywhere": true,
+	"debug.inlineValues": "on",
+	"debug.internalConsoleOptions": "openOnSessionStart",
+	"debug.openDebug": "openOnSessionStart",
+	"editor.acceptSuggestionOnCommitCharacter": false,
+	"editor.accessibilitySupport": "off",
+	"editor.autoClosingBrackets": "always",
+	"editor.autoClosingQuotes": "always",
+	"editor.autoSurround": "languageDefined",
+	"editor.cursorSmoothCaretAnimation": "off",
+	"editor.cursorStyle": "line",
+	"editor.detectIndentation": false,
+	"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontLigatures": false,
+	"editor.fontSize": 16,
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": true,
+	"editor.formatOnType": false,
+	"editor.inlineSuggest.enabled": true,
+	"editor.insertSpaces": true,
+	"editor.lightbulb.enabled": false,
+	"editor.lineNumbers": "on",
+	"editor.multiCursorModifier": "ctrlCmd",
+	"editor.parameterHints.enabled": true,
+	"editor.renderWhitespace": "all",
+	"editor.rulers": [
+		80
+	],
+	"editor.scrollBeyondLastLine": false,
+	"editor.showFoldingControls": "always",
+	"editor.snippetSuggestions": "top",
+	"editor.stickyScroll.enabled": true,
+	"editor.suggest.localityBonus": true,
+	"editor.suggestSelection": "first",
+	"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+	"editor.wordWrap": "off",
+	"emmet.triggerExpansionOnTab": true,
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"exsql.inMemory.executor.cache_all_fields.enabled": true,
+	"exsql.inMemory.executor.enabled": true,
+	"files.associations": {
+		"*.md": "mdx",
+		"*.tsx": "typescriptreact",
+		"*.vue": "vue"
+	},
+	"files.autoSave": "onFocusChange",
+	"files.eol": "\n",
+	"files.exclude": {
+		"**/.classpath": true,
+		"**/.factorypath": true,
+		"**/.project": true,
+		"**/.settings": true,
+		"/.git": true,
+		"/node_modules": true,
+		"/node_modules/": true,
+		"/target/": true,
+		"USE_GITIGNORE": true
+	},
+	"files.trimTrailingWhitespace": true,
+	"files.watcherExclude": {
+		"**/.ammonite": true,
+		"**/.bloop": true,
+		"**/.metals": true,
+		"/node_modules": true,
+		"/target": true
+	},
+	"git.autofetch": true,
+	"github.copilot.enable": {
+		"*": true,
+		"markdown": true,
+		"plaintext": true,
+		"rust": true,
+		"typescript": true,
+		"yaml": true
+	},
+	"githubPullRequests.pullBranch": "never",
+	"gitlens.codeLens.authors.command": false,
+	"gitlens.codeLens.authors.enabled": false,
+	"gitlens.hovers.currentLine.over": "line",
+	"go.autocompleteUnimportedPackages": true,
+	"go.docsTool": "godoc",
+	"go.formatFlags": [
+		"-w"
+	],
+	"go.formatTool": "goimports",
+	"go.inlayHints.assignVariableTypes": true,
+	"go.languageServerExperimentalFeatures": {
+		"diagnostics": true
+	},
+	"go.lintFlags": [
+		"--enable-all",
+		"--new"
+	],
+	"go.toolsManagement.autoUpdate": true,
+	"go.useLanguageServer": true,
+	"gopls": {
+		"usePlaceholders": true
+	},
+	"haskell.manageHLS": "GHCup",
+	"html.format.contentUnformatted": "pre, code, textarea, title, h1, h2, h3, h4, h5, h6, p",
+	"html.format.extraLiners": "",
+	"html.format.unformatted": null,
+	"indentRainbow.excludedLanguages": [
+		"vue"
+	],
+	"leetcode.defaultLanguage": "rust",
+	"leetcode.filePath": {
+		"default": {
+			"filename": "${id}.${kebab-case-name}.${ext}",
+			"folder": ""
+		}
+	},
+	"mssql.connections": [
+		{
+			"database": "{{put-database-name-here}}",
+			"password": "",
+			"server": "{{put-server-name-here}}",
+			"user": "{{put-username-here}}"
+		}
+	],
+	"notebook.cellToolbarLocation": {
+		"default": "right",
+		"jupyter-notebook": "left"
+	},
+	"npm.keybindingsChangedWarningShown": true,
+	"prettier.requireConfig": false,
+	"redhat.telemetry.enabled": true,
+	"remote.onstartup": true,
+	"screencastMode.onlyKeyboardShortcuts": true,
+	"search.exclude": {
+		"**/*.code-search": true,
+		"**/.build": true,
+		"**/.gh-pages": true,
+		"**/bower_components": true,
+		"**/dist": true,
+		"**/node_modules": true,
+		"/node_modules": true,
+		"/target": true
+	},
+	"sync.removeExtensions": true,
+	"tabnine.experimentalAutoImports": true,
+	"terminal.integrated.copyOnSelection": true,
+	"terminal.integrated.defaultProfile.osx": "fish",
+	"terminal.integrated.enableMultiLinePasteWarning": false,
+	"terminal.integrated.env.osx": {
+		"FIG_NEW_SESSION": "1"
+	},
+	"terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+	"terminal.integrated.fontSize": 15,
+	"terminal.integrated.inheritEnv": false,
+	"terminal.integrated.rightClickBehavior": "paste",
+	"todo-tree.tree.showScanModeButton": false,
+	"update.mode": "manual",
+	"vim.autoSwitchInputMethod.enable": true,
+	"vim.debug.silent": true,
+	"vim.easymotion": true,
+	"vim.easymotionKeys": "sdfghjkl",
+	"vim.foldfix": true,
+	"vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)",
+	"vim.highlightedyank.duration": 100,
+	"vim.highlightedyank.enable": true,
+	"vim.hlsearch": true,
+	"vim.leader": "<space>",
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"after": [
+				"leader",
+				"leader",
+				"leader",
+				"b",
+				"d",
+				"w"
+			],
+			"before": [
+				"shift+f"
+			]
+		},
+		{
+			"before": [
+				"alt+s"
+			],
+			"commands": [
+				":split"
+			]
+		},
+		{
+			"before": [
+				"alt+v"
+			],
+			"commands": [
+				":vsplit"
+			]
+		},
+		{
+			"before": [
+				"<space>"
+			],
+			"commands": [
+				"vspacecode.space"
+			]
+		},
+		{
+			"before": [
+				","
+			],
+			"commands": [
+				"vspacecode.space",
+				{
+					"args": "m",
+					"command": "whichkey.triggerKey"
+				}
+			]
+		}
+	],
+	"vim.searchHighlightColor": "rgba(255, 235, 60, 0.4)",
+	"vim.sneak": true,
+	"vim.statusBarColorControl": false,
+	"vim.statusBarColors.commandlineinprogress": [
+		"#818596",
+		"#161821"
+	],
+	"vim.statusBarColors.easymotioninputmode": [
+		"#818596",
+		"#161821"
+	],
+	"vim.statusBarColors.easymotionmode": [
+		"#818596",
+		"#161821"
+	],
+	"vim.statusBarColors.insert": [
+		"#84A0C6",
+		"#161821"
+	],
+	"vim.statusBarColors.normal": [
+		"#161821",
+		"#818596"
+	],
+	"vim.statusBarColors.replace": [
+		"#E2A478",
+		"#161821"
+	],
+	"vim.statusBarColors.searchinprogressmode": [
+		"#818596",
+		"#161821"
+	],
+	"vim.statusBarColors.surroundinputmode": [
+		"#818596",
+		"#161821"
+	],
+	"vim.statusBarColors.visual": [
+		"#B4BE82",
+		"#161821"
+	],
+	"vim.statusBarColors.visualblock": [
+		"#B4BE82",
+		"#161821"
+	],
+	"vim.statusBarColors.visualline": [
+		"#B4BE82",
+		"#161821"
+	],
+	"vim.surround": true,
+	"vim.useCtrlKeys": true,
+	"vim.useSystemClipboard": true,
+	"vim.visualModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<space>"
+			],
+			"commands": [
+				"vspacecode.space"
+			]
+		},
+		{
+			"before": [
+				","
+			],
+			"commands": [
+				"vspacecode.space",
+				{
+					"args": "m",
+					"command": "whichkey.triggerKey"
+				}
+			]
+		}
+	],
+	"vim.visualstar": true,
+	"vim.whichwrap": "h,l,<,>,[,]",
+	"wallaby.startViewStatusBar": false,
+	"window.commandCenter": true,
+	"window.openFilesInNewWindow": "off",
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#161821",
+		"statusBar.debuggingBackground": "#161821",
+		"statusBar.debuggingForeground": "#818596",
+		"statusBar.foreground": "#818596",
+		"statusBar.noFolderBackground": "#161821"
+	},
+	"workbench.colorTheme": "GitHub Dark Default",
+	"workbench.editor.showTabs": true,
+	"workbench.editorAssociations": {
+		"*.ipynb": "jupyter-notebook"
+	},
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.tree.renderIndentGuides": "always",
+	"yaml.customTags": [
+		"!And",
+		"!And sequence",
+		"!If",
+		"!If sequence",
+		"!Not",
+		"!Not sequence",
+		"!Equals",
+		"!Equals sequence",
+		"!Or",
+		"!Or sequence",
+		"!FindInMap",
+		"!FindInMap sequence",
+		"!Base64",
+		"!Join",
+		"!Join sequence",
+		"!Cidr",
+		"!Ref",
+		"!Sub",
+		"!Sub sequence",
+		"!GetAtt",
+		"!GetAZs",
+		"!ImportValue",
+		"!ImportValue sequence",
+		"!Select",
+		"!Select sequence",
+		"!Split",
+		"!Split sequence"
+	],
+	"yaml.schemas": {},
+	"indentRainbow.indicatorStyle": "light",
+	"workbench.activityBar.visible": false,
+	"window.autoDetectColorScheme": true,
+	"workbench.preferredLightColorTheme": "GitHub Light",
+	"workbench.preferredDarkColorTheme": "GitHub Dark Default"
 }
