@@ -41,12 +41,31 @@ local default_keybinds = {
 	{ key = "x", mods = "ALT", action = wezterm.action({ CloseCurrentPane = { confirm = false } }) },
 }
 
+-- https://wezfurlong.org/wezterm/config/lua/wezterm.gui/get_appearance.html#wayland-gnome-appearance
+-- wezterm.gui is not available to the mux server, so take care to
+-- do something reasonable when this config is evaluated by the mux
+function get_appearance()
+  if wezterm.gui then
+    return wezterm.gui.get_appearance()
+  end
+  return 'Dark'
+end
+
+function scheme_for_appearance(appearance)
+  if appearance:find 'Dark' then
+    return 'Gooey (Gogh)'
+  else
+    return 'Gogh (Gogh)'
+  end
+end
+
+
 local config = {
 	use_ime = true,
 	font_size = 14.0,
-	color_scheme = "Jellybeans",
 	window_background_opacity = 0.95,
 	adjust_window_size_when_changing_font_size = false,
+	color_scheme = scheme_for_appearance(get_appearance()),
 
 	tab_bar_at_bottom = true,
 	hide_tab_bar_if_only_one_tab = true,

@@ -34,6 +34,7 @@ disabled = true
 disabled = true
 
 [git_status]
+ignore_submodules = true
 conflicted = "💥"
 ahead = "🏎💨"
 behind = "😰"
@@ -44,6 +45,9 @@ modified = "📝"
 staged = '🔦'
 renamed = "🏷"
 deleted = "🗑"
+
+[docker_context]
+disabled = true
 
 
 
