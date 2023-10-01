@@ -53,9 +53,9 @@ end
 
 function scheme_for_appearance(appearance)
   if appearance:find 'Dark' then
-    return 'Gooey (Gogh)'
+    return 'Jellybeans'
   else
-    return 'Gogh (Gogh)'
+    return 'Jellybeans'
   end
 end
 
