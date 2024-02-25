@@ -38,4 +38,4 @@
 [push]
 	autoSetupRemote = true
 [branch]
-	sort = -comitterdate
+	sort = -committerdate
