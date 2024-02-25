@@ -5,6 +5,8 @@
 	pager = delta
 [merge]
     conflictstyle = diff3
+[alias]
+	unstage = restore --staged
 [diff]
     colorMoved = default
 [pager]
@@ -23,3 +25,5 @@
 	hyperlinks-file-link-format = "vscode://file/{path}:{line}"
 [interactive]
     diffFilter = delta --color-only
+[fetch]
+	prune = true
