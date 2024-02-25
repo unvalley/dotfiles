@@ -3,12 +3,14 @@
 	email = kirohi.code@gmail.com
 [core]
 	pager = delta
+	excludesfile = ~/.gitignore
 [merge]
     conflictstyle = zdiff3
 [alias]
 	unstage = restore --staged
 [diff]
     colorMoved = default
+	algorithm = histogram
 [pager]
     diff = delta
     log = delta
@@ -27,3 +29,13 @@
     diffFilter = delta --color-only
 [fetch]
 	prune = true
+[init]
+	defaultBranch = main
+[commit]
+	verbose = true
+[help]
+	autocorrect = 10
+[push]
+	autoSetupRemote = true
+[branch]
+	sort = -comitterdate
