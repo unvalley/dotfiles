@@ -8,7 +8,7 @@ set -x GIT_MERGE_AUTOEDIT no
 # EXSQL
 set -x EXSQL_HOME ~/ghq/github.com/codatum/exsql
 set -x EXSQL_BQ_RUNNING_PROJECT exsql-sandbox
-set -x GOOGLE_APPLICATION_CREDENTIALS ~/.google-cloud/service-account.json
+# set -x GOOGLE_APPLICATION_CREDENTIALS ~/.google-cloud/service-account.json
 
 fish_add_path $EXSQL_HOME/target/debug
 
