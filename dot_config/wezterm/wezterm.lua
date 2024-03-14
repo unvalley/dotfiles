@@ -63,7 +63,7 @@ end
 local config = {
 	use_ime = true,
 	font_size = 14.0,
-	window_background_opacity = 0.95,
+	window_background_opacity = 0.70,
 	adjust_window_size_when_changing_font_size = false,
 	color_scheme = scheme_for_appearance(get_appearance()),
 
