@@ -26,20 +26,6 @@ abbr -a f 'fzf'
 # Rust
 abbr -a car 'cargo'
 
-# Node.js
-abbr -a nrc "npm run local"
-abbr -a nrcl "npm run local:loose"
-abbr -a nrs "npm run start -s --"
-abbr -a nrb "npm run build -s --"
-abbr -a nrd "npm run dev"
-abbr -a nrt "npm run test -s --"
-abbr -a nrtw "npm run test:watch -s --"
-abbr -a nrv "npm run validate -s --"
-abbr -a rmn "rm -rf node_modules"
-abbr -a fn "rm -rf node_modules; and npm i; and say NPM is done"
-abbr -a nic "npm install --prefer-offline"
-abbr -a nio "npm install --offline"
-
 # Git
 abbr -a g 'git'
 abbr -a gi 'git init'
