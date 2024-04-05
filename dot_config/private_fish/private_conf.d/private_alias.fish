@@ -27,7 +27,6 @@ abbr -a f 'fzf'
 abbr -a car 'cargo'
 
 # Node.js
-abbr -a ni "npm install"
 abbr -a nrc "npm run local"
 abbr -a nrcl "npm run local:loose"
 abbr -a nrs "npm run start -s --"
