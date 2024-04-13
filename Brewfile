@@ -17,7 +17,7 @@ brew "csview"
 brew "deno"
 brew "docker", link: false
 brew "dua-cli"
-brew "exa"
+brew "eza"
 brew "fd"
 brew "fdupes"
 brew "fish"
