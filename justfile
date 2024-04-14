@@ -22,3 +22,10 @@ setup-chezmoi:
 setup-screenshot:
     mkdir ~/Pictures/ScreenShot
     defaults write com.apple.screencapture location ~/Pictures/ScreenShot/;killall SystemUIServer
+
+setup-macos:
+    sudo defaults write -g ApplePressAndHoldEnabled -bool true
+
+# Enable key-repeating for Vim Plugin
+setup-vscode:
+    defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
