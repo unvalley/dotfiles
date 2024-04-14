@@ -43,13 +43,10 @@ brew "jq"                          # Lightweight and flexible command-line JSON 
 brew "just"                        # Handy way to save and run project-specific commands.
 brew "krb5"                        # Implementation of the Kerberos network authentication protocol.
 brew "libomp"                      # LLVM's OpenMP runtime library.
-brew "libpq", link: true           # PostgreSQL's C client library.
 brew "pango"                       # Library for layout and rendering of text.
-brew "librsvg"                     # Library to render SVG files using Cairo.
 brew "llvm"                        # Collection of modular and reusable compiler and toolchain technologies.
 brew "luajit"                      # Just-In-Time Compiler for the Lua programming language.
 brew "navi"                        # An interactive cheatsheet tool for the command-line.
-brew "netpbm"                      # Toolkit for manipulation of graphic images.
 brew "procs"                       # Modern replacement for 'ps'.
 brew "qemu"                        # Generic and open source machine emulator and virtualizer.
 brew "qt"                          # Cross-platform application framework.
