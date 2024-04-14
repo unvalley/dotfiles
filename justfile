@@ -1,3 +1,6 @@
+default:
+    just --list
+
 setup-brewfile:
     brew bundle --file=Brewfile
 
@@ -15,3 +18,7 @@ setup-fish:
 setup-chezmoi:
     chezmoi init https://github.com/unvalley/dotfiles.git
     chezmoi cd && chezmoi apply
+
+setup-screenshot:
+    mkdir ~/ScreenShot
+    defaults write com.apple.screencapture location ~/ScreenShot/;killall SystemUIServer
