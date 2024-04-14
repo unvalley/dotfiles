@@ -20,5 +20,5 @@ setup-chezmoi:
     chezmoi cd && chezmoi apply
 
 setup-screenshot:
-    mkdir ~/ScreenShot
-    defaults write com.apple.screencapture location ~/ScreenShot/;killall SystemUIServer
+    mkdir ~/Pictures/ScreenShot
+    defaults write com.apple.screencapture location ~/Pictures/ScreenShot/;killall SystemUIServer
