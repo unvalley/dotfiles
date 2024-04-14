@@ -29,3 +29,7 @@ setup-macos:
 # Enable key-repeating for Vim Plugin
 setup-vscode:
     defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+# Shows all installed formulae that are not dependencies of any other installed formula
+show-deletable-formula:
+    brew list | xargs -I{} sh -c 'brew uses --installed {} | wc -l | xargs printf "%20s is used by %2d formulae.\n" {}' | grep '0 formula'
