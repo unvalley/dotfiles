@@ -32,4 +32,9 @@ setup-vscode:
 
 # Shows all installed formulae that are not dependencies of any other installed formula
 show-deletable-formula:
-    brew list | xargs -I{} sh -c 'brew uses --installed {} | wc -l | xargs printf "%20s is used by %2d formulae.\n" {}' | grep '0 formula'
+    brew list | xargs -I{} sh -c 'brew uses --installed --formula {} | wc -l | xargs printf "%20s is used by %2d formulae.\n" {}' | grep '0 formula'
+
+# Setup Node.js with Volta
+setup-nodejs:
+    volta install node
+    node -v
