@@ -4,7 +4,6 @@ end
 
 abbr -a c 'bat'
 abbr -a cat 'bat'
-abbr -a g 'rg'
 abbr -a z 'zellij'
 abbr -a zel 'zellij'
 abbr -a e 'eza --icons --git'
@@ -22,6 +21,7 @@ abbr -a lta 'eza -T -a -I "node_modules|.git|.cache" --color=always --icons | le
 abbr -a rm 'trash-put'
 abbr -a n 'date "+%Y-%m-%d %H:%M:%S" | pbcopy'
 abbr -a f 'fzf'
+abbr -a ps 'procs'
 
 # Rust
 abbr -a car 'cargo'
