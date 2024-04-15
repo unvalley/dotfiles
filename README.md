@@ -9,6 +9,17 @@ Thanks for all dependencies.
 | Browser          | [Arc Browser](https://arc.net)            |
 | Password Manager | [Bitwarden](https://bitwarden.com)        |
 
+## Chrome Extensions
+
+- Bitwarden
+- Vimium
+- AutoPagerize
+- BlockTube
+- DF Tube (Distraction Free for YouTube)
+- Calm Twitter
+- DeepL
+- Refined GitHub
+
 ## Setup
 
 - [ ] Install [Arc Browser](https://arc.net)
