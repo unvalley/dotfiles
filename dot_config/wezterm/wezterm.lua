@@ -53,9 +53,9 @@ end
 
 function scheme_for_appearance(appearance)
   if appearance:find 'Dark' then
-    return 'Jellybeans'
+    return 'Catppuccin Mocha'
   else
-    return 'Jellybeans'
+    return 'Catppuccin Mocha'
   end
 end
 
@@ -63,7 +63,7 @@ end
 local config = {
 	use_ime = true,
 	font_size = 14.0,
-	window_background_opacity = 0.70,
+	window_background_opacity = 0.75,
 	adjust_window_size_when_changing_font_size = false,
 	color_scheme = scheme_for_appearance(get_appearance()),
 
