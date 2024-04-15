@@ -11,6 +11,11 @@ setup-git-config:
 setup-github:
     gh auth login
 
+# Setup gh (GitHub CLI) extensions
+setup-gh-extensions:
+    gh extension install seachicken/gh-poi
+    gh extension install dlvhdr/gh-dash
+
 setup-fish:
     echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
     chsh -s /opt/homebrew/bin/fish
@@ -38,3 +43,4 @@ show-deletable-formula:
 setup-nodejs:
     volta install node
     node -v
+
