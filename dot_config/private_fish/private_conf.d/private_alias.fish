@@ -19,7 +19,6 @@ abbr -a eta 'eza -T -a -I "node_modules|.git|.cache" --color=always --icons | le
 abbr -a t 'eza -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
 abbr -a lta 'eza -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
 abbr -a rm 'trash-put'
-abbr -a n 'date "+%Y-%m-%d %H:%M:%S" | pbcopy'
 abbr -a f 'fzf'
 abbr -a ps 'procs'
 
