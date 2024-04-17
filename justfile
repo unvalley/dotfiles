@@ -14,6 +14,7 @@ setup-fish:
 
 setup-macos:
     sudo defaults write -g ApplePressAndHoldEnabled -bool true
+	sudo defaults write com.apple.finder CreateDesktop -boolean false;killAll Finder
 
 setup-git-config:
     sh -c 'git config --global user.name "unvalley"'
