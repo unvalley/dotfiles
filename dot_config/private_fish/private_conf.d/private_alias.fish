@@ -21,6 +21,7 @@ abbr -a lta 'eza -T -a -I "node_modules|.git|.cache" --color=always --icons | le
 abbr -a rm 'trash-put'
 abbr -a f 'fzf'
 abbr -a ps 'procs'
+abbr -a che 'chezmoi'
 
 # Rust
 abbr -a car 'cargo'
