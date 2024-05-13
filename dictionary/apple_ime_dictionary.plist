@@ -218,5 +218,17 @@
 		<key>shortcut</key>
 		<string>こうほうごかんせい</string>
 	</dict>
+	<dict>
+		<key>phrase</key>
+		<string>型情報</string>
+		<key>shortcut</key>
+		<string>かたじょうほう</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string>舐達麻</string>
+		<key>shortcut</key>
+		<string>なめだるま</string>
+	</dict>
 </array>
 </plist>
