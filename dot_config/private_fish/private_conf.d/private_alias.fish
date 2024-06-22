@@ -48,3 +48,6 @@ abbr -a gpo 'git push origin'
 abbr -a gst 'git status'
 abbr -a gss 'git status -s'
 abbr -a tasks 'gh issue list --repo unvalley/projects'
+
+# Docker
+abbr -a doc 'docker'
