@@ -1,8 +1,50 @@
+[user]
+	name = "unvalley"
+	email = kirohi.code@gmail.com
+[core]
+	pager = delta
+	excludesfile = ~/.gitignore
+[merge]
+	conflictstyle = zdiff3
+[alias]
+	unstage = restore --staged
+	home = "!f() { \
+		branch=$(git remote show origin | grep 'HEAD branch' | cut -d' ' -f5); \
+		git switch \"$branch\"; \
+		}; f"
+[diff]
+	colorMoved = default
+	algorithm = histogram
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+[delta]
+	plus-style = "syntax #012800"
+	minus-style = "syntax #340001"
+	syntax-theme = Monokai Extended
+	navigate = true
+	side-by-side = true
+	line-numbers = true
+	hyper-links = true
+	hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+[interactive]
+	diffFilter = delta --color-only
+[fetch]
+	prune = true
+[init]
+	defaultBranch = main
+[commit]
+	verbose = true
+[help]
+	autocorrect = 10
+[push]
+	autoSetupRemote = true
+[branch]
+	sort = -committerdate
 [ghq]
 	root = /Users/unvalley/src
-[user]
-	name = unvalley
-	email = kirohi.code@gmail.com
 [credential]
 	helper = store
 [filter "lfs"]
@@ -10,3 +52,4 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+

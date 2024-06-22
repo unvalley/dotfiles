@@ -51,3 +51,6 @@ abbr -a tasks 'gh issue list --repo unvalley/projects'
 
 # Docker
 abbr -a doc 'docker'
+
+# file contents to clipboard
+abbr -a clip 'pbcopy < '
