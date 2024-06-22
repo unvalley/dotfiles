@@ -35,7 +35,7 @@ abbr -a gaaa 'git add -A'
 abbr -a gb 'git branch'
 abbr -a gc 'git commit'
 # use git cz, previoulsy this was `gcm`
-abbr -a czg 'git commit -m'
+abbr -a gcm 'czg'
 abbr -a gco 'git checkout'
 abbr -a gd 'git diff'
 abbr -a gdc 'git diff --cached'
