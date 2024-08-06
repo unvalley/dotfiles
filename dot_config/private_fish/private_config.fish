@@ -85,3 +85,7 @@ if status is-interactive
     zoxide init fish | source
 end
 
+function save_history --on-event fish_preexec
+    history --merge
+end
+
