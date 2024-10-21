@@ -2,6 +2,9 @@ function is_installed
     command -v $argv[1] >/dev/null
 end
 
+alias lscpu 'system_profiler SPHardwareDataType'
+alias default "git remote show origin | grep 'HEAD branch' | awk '{print $NF}'"
+
 abbr -a c 'bat'
 abbr -a cat 'bat'
 abbr -a z 'zellij'
