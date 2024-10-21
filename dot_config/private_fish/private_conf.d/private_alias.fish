@@ -3,7 +3,6 @@ function is_installed
 end
 
 alias lscpu 'system_profiler SPHardwareDataType'
-alias default "git remote show origin | grep 'HEAD branch' | awk '{print $NF}'"
 
 abbr -a c 'bat'
 abbr -a cat 'bat'
