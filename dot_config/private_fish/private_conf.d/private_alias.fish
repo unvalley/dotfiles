@@ -48,6 +48,8 @@ abbr -a gld 'git log --pretty=format:"%h %ad %s" --date=short --all'
 abbr -a gm 'git merge --no-ff'
 abbr -a gpl 'git pull origin'
 abbr -a gpo 'git push origin'
+# git push current branch
+abbr -a gpoc 'git push origin HEAD'
 abbr -a gst 'git status'
 abbr -a gss 'git status -s'
 abbr -a tasks 'gh issue list --repo unvalley/projects'
