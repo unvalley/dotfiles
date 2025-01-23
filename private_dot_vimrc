@@ -1,16 +1,14 @@
-# shellcheck disable=SC2148
-# shellcheck disable=SC2121
 set shell=/bin/fish
 
 syntax on
 filetype indent on
 colorscheme desert
 
-encoding utf-8
-shiftwidth 4
-tabstop 4
-softtabstop 4
-backspace indent,eol,start
+set encoding=utf-8
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set backspace=indent,eol,start
 
 set number
 set ruler
