@@ -1,0 +1,4 @@
+node = "~22"
+
+[settings]
+auto-install = true
