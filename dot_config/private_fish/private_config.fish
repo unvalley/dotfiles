@@ -88,5 +88,3 @@ end
 function save_history --on-event fish_preexec
     history --merge
 end
-
-proto activate fish | source
