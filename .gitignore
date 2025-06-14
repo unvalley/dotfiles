@@ -4,3 +4,4 @@ aws/
 .ssh/
 
 .DS_Store
+.claude
