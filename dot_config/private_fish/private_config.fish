@@ -88,3 +88,16 @@ end
 function save_history --on-event fish_preexec
     history --merge
 end
+
+# TODO: instant swich
+function toggle_theme
+    if defaults read -g AppleInterfaceStyle &>/dev/null
+        set -U theme "dark"
+        yes | fish_config theme save "Catppuccin Mocha"
+    else
+        set -U theme "light"
+        yes | fish_config theme save "Catppuccin Latte"
+    end
+end
+
+toggle_theme
