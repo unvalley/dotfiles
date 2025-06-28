@@ -1,28 +1,22 @@
-format = """
-$username\
-$hostname\
-$aws\
-$directory\
-$git_branch\
-$git_commit\
-$git_state\
-$git_status\
-$cmd_duration\
-$line_break\
-$status\
-$character"""
+"$schema" = 'https://starship.rs/config-schema.json'
 
+format = """
+$username$hostname$directory$git_branch$git_commit$git_state$cmd_duration\
+$line_break\
+$git_status$status$character"""
 add_newline = false
 
 [username]
 disabled = true
 
 [character]
-success_symbol = "[▶](bold green)"
-error_symbol = "[▶](bold red)"
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
+vimcmd_symbol = "[<](bold yellow)"
 
 [directory]
 truncate_to_repo = false
+style = "blue"
 
 [time]
 disabled = true
@@ -30,24 +24,24 @@ disabled = true
 [package]
 disabled = true
 
+[aws]
+disabled = true
+
 [gcloud]
 disabled = true
 
 [git_status]
 ignore_submodules = true
-conflicted = "💥"
-ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
-untracked = "🌚‍"
-stashed = "📦"
-modified = "📝"
-staged = '🔦'
-renamed = "🏷"
-deleted = "🗑"
+conflicted = "!"
+ahead = "↑"
+behind = "↓"
+diverged = "⇅"
+untracked = "?"
+stashed = "≡"
+modified = "~"
+staged = "+"
+renamed = "»"
+deleted = "x"
 
 [docker_context]
 disabled = true
-
-
-
