@@ -59,16 +59,6 @@ function scheme_for_appearance(appearance)
   end
 end
 
-wezterm.on("update-status", function(window, pane)
-    local appearance = wezterm.gui.get_appearance()
-    local mode = appearance:find("Dark") and "dark" or "light"
-    
-    -- Set the OS appearance using fish shell
-    wezterm.background_child_process({
-        "fish", "-c", "set --universal OS_APPEARANCE " .. mode
-    })
-end)
-
 local config = {
 	use_ime = true,
 	font_size = 14.0,
