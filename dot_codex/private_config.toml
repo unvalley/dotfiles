@@ -37,3 +37,6 @@ args = ["--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-s
 [mcp_servers.playwright]
 command = "npx"
 args = ["-y", "@playwright/mcp"]
+[mcp_servers.shadcn]
+command = "npx"
+args = ["shadcn@latest", "mcp"]
