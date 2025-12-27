@@ -12,13 +12,8 @@ brew "gh"                          # GitHub CLI to manage GitHub from the comman
 
 # Programming Languages
 brew "go"                          # The Go programming language.
-brew "deno"                        # A secure runtime for JavaScript and TypeScript.
-brew "oven-sh/bun/bun"             # JavaScript runtime, bundler, transpiler and package manager.
 brew "llvm"                        # Collection of modular and reusable compiler and toolchain technologies.
 brew "luajit"                      # Just-In-Time Compiler for the Lua programming language.
-
-# Programming Language Related
-brew "volta"                       # JavaScript tool manager.
 brew "rustup-init"                 # Installer for the systems programming language Rust.
 
 # Tools
