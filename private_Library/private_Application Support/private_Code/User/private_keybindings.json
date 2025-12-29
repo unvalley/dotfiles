@@ -34,11 +34,6 @@
     {
         "key": "space",
         "command": "vspacecode.space",
-        "when": "editorTextFocus && neovim.mode == normal"
-    },
-    {
-        "key": "space",
-        "command": "vspacecode.space",
         "when": "sideBarFocus && !inputFocus && !whichkeyActive"
     },
     {

@@ -54,14 +54,14 @@ gst       # git status
 ## Code Architecture
 
 ### Directory Structure
-- `dot_config/` - Configuration files for CLI tools (git, fish, helix, starship, wezterm, zellij)
+- `dot_config/` - Configuration files for CLI tools (git, fish, starship, wezterm, zellij)
 - `private_Library/` - macOS application support files (VS Code settings, cargo-atcoder)
 - `browser_extensions/` - Browser extension configurations
 - Fish shell functions in `dot_config/private_fish/functions/`
 
 ### Key Configurations
 - **Shell**: fish with extensive aliases and custom functions
-- **Editors**: VS Code (primary) with Vim mode, Helix, Neovim
+- **Editors**: VS Code (primary) with Vim mode
 - **Terminal**: Wezterm with Zellij multiplexer
 - **Version Control**: Git with delta diff tool, conventional commits via cz-git
 - **Prompt**: Starship

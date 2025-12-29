@@ -59,7 +59,7 @@ brew "zoxide"                      # Faster way to navigate your filesystem.
 brew "daipeihust/tap/im-select"    # Utility to switch input methods.
 
 # Cloud
-cask "google-cloud-sdk"
+cask "gcloud-cli"
 brew "docker", link: false         # Platform for developing, shipping, and running applications in containers.
 cask "orbstack"
 
@@ -88,7 +88,6 @@ cask "clipy"
 
 # Editor
 brew "vim"
-brew "neovim"
 cask "visual-studio-code"
 cask "zed"
 

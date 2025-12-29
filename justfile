@@ -9,14 +9,14 @@ setup-chezmoi:
     chezmoi cd && chezmoi apply
 
 setup-fish:
-    echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+    sh -c 'grep -q "^/opt/homebrew/bin/fish$" /etc/shells || echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells >/dev/null'
     chsh -s /opt/homebrew/bin/fish
 
 setup-macos:
     sudo defaults write -g ApplePressAndHoldEnabled -bool true
-	sudo defaults write com.apple.finder CreateDesktop -boolean false;killAll Finder
-	sudo launchctl disable gui/"$(id -u)"/com.apple.rcd
-	sudo launchctl kill SIGTERM gui/"$(id -u)"/com.apple.rcd
+    sudo defaults write com.apple.finder CreateDesktop -boolean false; killall Finder
+    sudo launchctl disable gui/"$(id -u)"/com.apple.rcd
+    sudo launchctl kill SIGTERM gui/"$(id -u)"/com.apple.rcd
 
 setup-git-config:
     sh -c 'git config --global user.name "unvalley"'
