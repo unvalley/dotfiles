@@ -1,42 +1,13 @@
-model = "gpt-5-codex"
 model_reasoning_effort = "high"
 notify = ["bash", "-lc", "afplay /System/Library/Sounds/Ping.aiff"]
 
-[tools]
-web_search = true
-
-[projects."/Users/unvalley/ghq/github.com/codatum/exsql"]
-trust_level = "trusted"
-
-[projects."/Users/unvalley/ghq/github.com/unvalley/biome"]
-trust_level = "trusted"
-
-[projects."/Users/unvalley/ghq/github.com/unvalley/ephe"]
-trust_level = "trusted"
-
-[projects."/Users/unvalley/ghq/github.com/unvalley/me"]
-trust_level = "trusted"
-
-[projects."/Users/unvalley/ghq/github.com/unvalley/fyber"]
-trust_level = "trusted"
-
-[projects."/Users/unvalley/ghq/github.com/unvalley/exsql-playground"]
-trust_level = "trusted"
-
-[projects."/Users/unvalley/ghq/github.com/unvalley/unveil_cli"]
-trust_level = "trusted"
+[features]
+web_search_request = true
 
 [mcp_servers.chrome-devtools]
 command = "npx"
 args = ["chrome-devtools-mcp@latest"]
 
-[mcp_servers.serena]
-command = "uvx"
-args = ["--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context", "codex", "--enable-web-dashboard=false", "--project", "/Users/unvalley/ghq/github.com/unvalley/me"]
-
 [mcp_servers.playwright]
 command = "npx"
 args = ["-y", "@playwright/mcp"]
-[mcp_servers.shadcn]
-command = "npx"
-args = ["shadcn@latest", "mcp"]
