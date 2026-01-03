@@ -58,7 +58,7 @@ end
 function fish_user_key_bindings
     for mode in insert default visual
         fish_default_key_bindings -M $mode
-        bind -M $mode \co __fzf_open --editor
+        bind -M $mode \co '__fzf_open --editor'
         bind -M $mode \cr __fzf_reverse_isearch
         bind -M $mode \ch __fzf_reverse_isearch
         bind -M $mode \c] __ghq_repository_search
