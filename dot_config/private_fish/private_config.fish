@@ -89,14 +89,25 @@ function save_history --on-event fish_preexec
     history --merge
 end
 
+# Change zellij theme in config.kdl (mac only)
+function _change_zellij_theme -a zellij_theme
+    # Require theme name
+    test -n "$zellij_theme"; or return 1
+    set -l config_file "$HOME/.config/zellij/config.kdl"
+    test -f "$config_file"; or return 0
+    # sed in-place edit
+    command sed -i '' -E "s/^theme \"[^\"]+\"/theme \"$zellij_theme\"/" "$config_file"
+end
 # TODO: instant swich
 function toggle_theme
     if defaults read -g AppleInterfaceStyle &>/dev/null
         set -U theme "dark"
         yes | fish_config theme save "Catppuccin Mocha"
+        _change_zellij_theme "catppuccin-mocha"
     else
         set -U theme "light"
         yes | fish_config theme save "Catppuccin Latte"
+        _change_zellij_theme "catppuccin-latte"
     end
 end
 
