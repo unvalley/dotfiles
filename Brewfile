@@ -68,7 +68,6 @@ cask "font-fira-code"
 cask "font-hack-nerd-font"
 
 # Creativity
-cask "affine"
 cask "notion"
 
 # Productivity
@@ -80,7 +79,6 @@ cask "meetingbar"
 # Work
 cask "slack"
 cask "discord"
-cask "todoist"
 cask "zoom"
 cask "alt-tab"
 cask "bluesnooze"
@@ -92,7 +90,5 @@ cask "visual-studio-code"
 cask "zed"
 
 # Dev
-cask "wezterm"
-cask "tableplus"
+cask ""
 cask "spotify"
-cask "timing"
