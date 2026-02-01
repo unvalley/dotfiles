@@ -46,3 +46,4 @@ font-family = "Hack Nerd Font Mono"
 background-opacity = 0.85
 theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 window-show-tab-bar = auto
+link = open
