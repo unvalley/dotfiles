@@ -2,7 +2,7 @@ model_reasoning_effort = "high"
 notify = ["bash", "-lc", "afplay /System/Library/Sounds/Ping.aiff"]
 
 [features]
-web_search = "cached"
+web_search = "live"
 
 [mcp_servers.chrome-devtools]
 command = "npx"
