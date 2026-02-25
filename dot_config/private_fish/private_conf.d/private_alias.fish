@@ -60,8 +60,4 @@ abbr -a doc 'docker'
 # file contents to clipboard
 abbr -a clip 'pbcopy < '
 
-# Claude
-abbr -a cl 'claude'
-abbr -a cld 'claude --dangerously-skip-permissions'
-
 alias aws-login 'aws sso login --sso-session dev'
