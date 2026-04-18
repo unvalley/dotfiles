@@ -1,94 +1,128 @@
-# Homebrew Taps
-tap "daipeihust/tap"               # Custom repository for specific tools not in the main Homebrew repository.
-tap "homebrew/bundle"              # Homebrew extension for managing Brewfile to specify project dependencies.
-tap "homebrew/cask-fonts"          # Repository for installing fonts.
-tap "homebrew/services"            # Homebrew services integration for starting Homebrew-installed services.
-tap "koekeishiya/formulae"         # Repository for 'yabai' and 'skhd', window management tools.
+# =============================================================================
+# Taps
+# =============================================================================
+tap "daipeihust/tap"               # im-select and other community tools
+tap "koekeishiya/formulae"         # yabai / skhd window management
 
-# Essential Tools
-brew "just"                        # Handy way to save and run project-specific commands.
-brew "chezmoi"                     # Tool to manage dotfiles securely across multiple machines.
-brew "gh"                          # GitHub CLI to manage GitHub from the command line.
+# =============================================================================
+# Core CLI
+# =============================================================================
+brew "just"                        # Command runner (justfile)
+brew "chezmoi"                     # Dotfiles manager
+brew "gh"                          # GitHub CLI
+brew "ghq"                         # Remote repository manager
+brew "git-delta"                   # Syntax-highlighting pager for git diff
+brew "git-lfs"                     # Git extension for large files
+brew "gitui"                       # Terminal UI for git
 
-# Programming Languages
-brew "go"                          # The Go programming language.
-brew "llvm"                        # Collection of modular and reusable compiler and toolchain technologies.
-brew "luajit"                      # Just-In-Time Compiler for the Lua programming language.
-brew "rustup-init"                 # Installer for the systems programming language Rust.
+# =============================================================================
+# Shell & Prompt
+# =============================================================================
+brew "fish"                        # Friendly interactive shell
+brew "starship"                    # Cross-shell prompt
+brew "zoxide"                      # Smarter cd
+brew "fzf"                         # Fuzzy finder
 
-# Tools
-brew "webp"                        # Tool for the WebP image format, providing lossless and lossy compression.
-brew "jpeg-xl"                     # Image format providing high compression efficiency.
-brew "aom"                         # Open-source codec for AV1 video streams.
-brew "bat"                         # A clone of 'cat' with syntax highlighting and Git integration.
-brew "biome"                       # The web toolchain.
-brew "shellharden"                 # Shell script linter.
-brew "glib"                        # Low-level core library that forms the basis for projects such as GTK+ and GNOME.
-brew "csview"                      # CSV file viewer for the command line.
-brew "dua-cli"                     # Disk usage analyzer with an interactive CLI.
-brew "eza"                         # Not widely known; potentially a specific or custom utility.
-brew "fd"                          # Simple, fast alternative to 'find'.
-brew "fdupes"                      # Utility for identifying and deleting duplicate files.
-brew "fish"                        # Friendly interactive shell.
-brew "fzf"                         # Command-line fuzzy finder.
-brew "gd"                          # Library for dynamic image creation.
-brew "gdk-pixbuf"                  # Toolkit for image loading and pixel buffer manipulation.
-brew "ghq"                         # Remote repository management tool.
-brew "git-delta"                   # Syntax-highlighter for git and diff output.
-brew "git-lfs"                     # Git extension for versioning large files.
-brew "gitui"                       # Blazing fast terminal-ui for git.
-brew "harfbuzz"                    # Open source text shaping library.
-brew "hey"                         # Tool for HTTP load generation.
-brew "hyperfine"                   # Command-line benchmarking tool.
-brew "jq"                          # Lightweight and flexible command-line JSON processor.
-brew "krb5"                        # Implementation of the Kerberos network authentication protocol.
-brew "libomp"                      # LLVM's OpenMP runtime library.
-brew "pango"                       # Library for layout and rendering of text.
-brew "navi"                        # An interactive cheatsheet tool for the command-line.
-brew "procs"                       # Modern replacement for 'ps'.
-brew "qemu"                        # Generic and open source machine emulator and virtualizer.
-brew "qt"                          # Cross-platform application framework.
-brew "rdfind"                      # Tool to find duplicate files.
-brew "ripgrep"                     # Line-oriented search tool that recursively searches for a regex pattern.
-brew "starship"                    # Minimal, blazing-fast, and infinitely customizable prompt for any shell.
-brew "tealdeer"                    # Fast tldr client.
-brew "trash-cli"                   # Command-line interface to the system trash.
-brew "tree"                        # Recursive directory listing command that produces a depth-indented listing of files.
-brew "zellij"                      # Terminal workspace and multiplexer.
-brew "zoxide"                      # Faster way to navigate your filesystem.
-brew "daipeihust/tap/im-select"    # Utility to switch input methods.
+# =============================================================================
+# Modern Unix replacements
+# =============================================================================
+brew "bat"                         # cat with syntax highlighting
+brew "eza"                         # ls replacement with git integration
+brew "fd"                          # find replacement
+brew "procs"                       # ps replacement
+brew "ripgrep"                     # grep replacement
+brew "tree"                        # Directory tree listing
+brew "trash-cli"                   # Safe `rm` to system trash
 
-# Cloud
-cask "gcloud-cli"
-brew "docker", link: false         # Platform for developing, shipping, and running applications in containers.
-cask "orbstack"
+# =============================================================================
+# Dev utilities
+# =============================================================================
+brew "biome"                       # Web toolchain (linter / formatter)
+brew "csview"                      # CSV viewer
+brew "dua-cli"                     # Interactive disk usage
+brew "fdupes"                      # Find duplicate files
+brew "rdfind"                      # Find duplicate files (alt)
+brew "hey"                         # HTTP load generator
+brew "hyperfine"                   # Benchmarking tool
+brew "jq"                          # JSON processor
+brew "navi"                        # Interactive cheatsheet
+brew "shellharden"                 # Shell script linter
+brew "tealdeer"                    # Fast tldr client
+brew "daipeihust/tap/im-select"    # Input method switcher
 
-# Font
-cask "font-fira-code"
-cask "font-hack-nerd-font"
+# =============================================================================
+# Image / Media
+# =============================================================================
+brew "aom"                         # AV1 codec
+brew "jpeg-xl"                     # JPEG XL format
+brew "webp"                        # WebP format
 
-# Creativity
-cask "notion"
+# =============================================================================
+# Languages & Toolchains
+# =============================================================================
+brew "go"                          # Go
+brew "llvm"                        # LLVM toolchain
+brew "luajit"                      # LuaJIT
+brew "rustup-init"                 # Rust installer
 
-# Productivity
-cask "raycast"
-cask "rectangle"
-cask "google-drive"
-cask "meetingbar"
+# =============================================================================
+# System libraries
+# =============================================================================
+brew "gd"                          # Graphics library
+brew "gdk-pixbuf"                  # Image loading
+brew "glib"                        # GLib core library
+brew "harfbuzz"                    # Text shaping
+brew "krb5"                        # Kerberos
+brew "libomp"                      # LLVM OpenMP
+brew "pango"                       # Text layout
+brew "qemu"                        # Machine emulator
+brew "qt"                          # Qt framework
 
-# Work
-cask "slack"
-cask "discord"
-cask "zoom"
-cask "alt-tab"
-cask "bluesnooze"
-cask "clipy"
+# =============================================================================
+# Terminal multiplexer
+# =============================================================================
+brew "zellij"                      # Terminal workspace / multiplexer
 
-# Editor
+# =============================================================================
+# Editors
+# =============================================================================
 brew "vim"
 cask "visual-studio-code"
 cask "zed"
 
-# Dev
-cask ""
+# =============================================================================
+# Cloud / Containers
+# =============================================================================
+cask "gcloud-cli"
+cask "orbstack"
+brew "docker", link: false
+
+# =============================================================================
+# Fonts
+# =============================================================================
+cask "font-fira-code"
+cask "font-hack-nerd-font"
+
+# =============================================================================
+# Productivity
+# =============================================================================
+cask "raycast"
+cask "rectangle"
+cask "alt-tab"
+cask "clipy"
+cask "google-drive"
+cask "meetingbar"
+cask "notion"
+
+# =============================================================================
+# Communication
+# =============================================================================
+cask "slack"
+cask "discord"
+cask "zoom"
+
+# =============================================================================
+# Media / Misc
+# =============================================================================
 cask "spotify"
+cask "bluesnooze"
