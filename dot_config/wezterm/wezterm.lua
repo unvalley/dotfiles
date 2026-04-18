@@ -1,5 +1,4 @@
 local wezterm = require("wezterm")
-local utils = require("utils")
 
 -- Ref: https://github.com/yutkat/dotfiles/blob/main/.config/wezterm/wezterm.lua
 local tmux_keybinds = {
@@ -20,46 +19,29 @@ local tmux_keybinds = {
 	{ key = "7", mods = "CTRL", action = wezterm.action({ ActivateTab = 6 }) },
 	{ key = "8", mods = "CTRL", action = wezterm.action({ ActivateTab = 7 }) },
 	{ key = "9", mods = "CTRL", action = wezterm.action({ ActivateTab = 8 }) },
-	{ key = "v", mods = "ALT",  action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
+	{ key = "v", mods = "ALT", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
 	{ key = "s", mods = "ALT", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
 	{ key = "x", mods = "ALT", action = wezterm.action({ CloseCurrentPane = { confirm = false } }) },
 	{ key = "Enter", mods = "ALT", action = "QuickSelect" },
 }
 
-local default_keybinds = {
-	{ key = "c", mods = "CTRL|SHIFT", action = wezterm.action({ CopyTo = "Clipboard" }) },
-	{ key = "v", mods = "CTRL|SHIFT", action = wezterm.action({ PasteFrom = "Clipboard" }) },
-	{ key = "Insert", mods = "SHIFT", action = wezterm.action({ PasteFrom = "PrimarySelection" }) },
-	{ key = "=", mods = "CTRL", action = "ResetFontSize" },
-	{ key = "+", mods = "CTRL", action = "IncreaseFontSize" },
-	{ key = "-", mods = "CTRL", action = "DecreaseFontSize" },
-	{ key = "x", mods = "CTRL|SHIFT", action = "ActivateCopyMode" },
-	{ key = "PageUp", mods = "ALT", action = wezterm.action({ ScrollByPage = -1 }) },
-	{ key = "PageDown", mods = "ALT", action = wezterm.action({ ScrollByPage = 1 }) },
-	{ key = "z", mods = "ALT", action = "ReloadConfiguration" },
-	{ key = "z", mods = "ALT|SHIFT", action = wezterm.action({ EmitEvent = "toggle-tmux-keybinds" }) },
-	{ key = "x", mods = "ALT", action = wezterm.action({ CloseCurrentPane = { confirm = false } }) },
-}
-
--- https://wezfurlong.org/wezterm/config/lua/wezterm.gui/get_appearance.html#wayland-gnome-appearance
--- wezterm.gui is not available to the mux server, so take care to
--- do something reasonable when this config is evaluated by the mux
-function get_appearance()
-  if wezterm.gui then
-    return wezterm.gui.get_appearance()
-  end
-  return 'Dark'
+-- https://wezfurlong.org/wezterm/config/lua/wezterm.gui/get_appearance.html
+-- wezterm.gui is unavailable to the mux server, so fall back to 'Dark'.
+local function get_appearance()
+	if wezterm.gui then
+		return wezterm.gui.get_appearance()
+	end
+	return "Dark"
 end
 
-function scheme_for_appearance(appearance)
-  if appearance:find 'Dark' then
-    return 'Catppuccin Mocha'
-  else
-    return 'Catppuccin Latte'
-  end
+local function scheme_for_appearance(appearance)
+	if appearance:find("Dark") then
+		return "Catppuccin Mocha"
+	end
+	return "Catppuccin Latte"
 end
 
-local config = {
+return {
 	use_ime = true,
 	font_size = 14.0,
 	window_background_opacity = 0.85,
@@ -89,5 +71,3 @@ local config = {
 		},
 	},
 }
-
-return config
