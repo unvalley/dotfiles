@@ -1,7 +1,7 @@
 /README.md
 /.github
-/.devcontainer
-/LICENSE
-/just-setup.sh
 /justfile
 /Brewfile
+
+# Runtime state (managed by fish/toggle_theme, not dotfiles)
+.config/fish/fish_variables

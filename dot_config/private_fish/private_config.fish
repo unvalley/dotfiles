@@ -1,60 +1,56 @@
 # Do not show the fish greeting
 set fish_greeting
 
+# ---- Environment ----
 set -x EDITOR vim
 set -x LANG en_US.UTF-8
 set -x GIT_MERGE_AUTOEDIT no
 
-# EXSQL
+# ---- Project: EXSQL ----
 set -x EXSQL_HOME ~/ghq/github.com/codatum/exsql
 set -x EXSQL_BQ_RUNNING_PROJECT exsql-sandbox
-# set -x GOOGLE_APPLICATION_CREDENTIALS ~/.google-cloud/service-account.json
-
 fish_add_path $EXSQL_HOME/target/debug
 
-
-# Rust
+# ---- Rust ----
 fish_add_path ~/.rustup/toolchains/stable-x86_64-apple-darwin/bin
 fish_add_path ~/.rustup/toolchains/stable-aarch64-apple-darwin/bin
 fish_add_path ~/.rustup/toolchains/nightly-aarch64-apple-darwin/bin
 fish_add_path $HOME/.cargo/bin
 
-# Go
+# ---- Go ----
 set -x GOENV_ROOT $HOME/.goenv
 fish_add_path $GOENV_ROOT/bin
 fish_add_path $GOROOT/bin
 fish_add_path $GOPATH/bin
 
-# Python
+# ---- Python ----
 set -x PYENV_ROOT $HOME/.pyenv
 fish_add_path $PYENV_ROOT/bin
 
-# volta
+# ---- Node.js (Volta) ----
 set -gx VOLTA_HOME "$HOME/.volta"
 if test -d $VOLTA_HOME/bin
-	fish_add_path $VOLTA_HOME/bin
+    fish_add_path $VOLTA_HOME/bin
 end
 
-
-# AWS
+# ---- AWS ----
 set -gx AWS_DEFAULT_REGION ap-northeast-1
 
-# Google Cloud SDK
+# ---- Google Cloud SDK ----
 set -x CLOUDSDK_PYTHON python3
 
-# LLVM
-#fish_add_path /opt/homebrew/opt/llvm/bin
-#set -gx LDFLAGS "-L/opt/homebrew/opt/llvm/lib"
-#set -gx CPPFLAGS "-I/opt/homebrew/opt/llvm/include"
+# ---- Haskell (ghcup) ----
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+if test -f $HOME/.ghcup/env
+    fish_add_path $HOME/.cabal/bin $HOME/.ghcup/bin
+end
 
-# fzf
-set -U FZF_LEGACY_KEYBINDINGS 0
-set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
+# ---- fzf ----
 function fzf
     command fzf --height 30% --reverse --border $argv
 end
 
-# KEY_BINDINGS
+# ---- Key bindings ----
 function fish_user_key_bindings
     for mode in insert default visual
         fish_default_key_bindings -M $mode
@@ -67,21 +63,16 @@ function fish_user_key_bindings
     fish_vi_key_bindings --no-erase
 end
 
-# Extends `cd` command to list directory contents after changing directory
+# Extend `cd` to list directory contents after changing directory
 function cd
     builtin cd $argv[1]
     ls -l
 end
 
-fish_add_path /usr/local/opt/mysql@5.7/bin
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; test -f /Users/unvalley/.ghcup/env ; and fish_add_path $HOME/.cabal/bin /Users/unvalley/.ghcup/bin # ghcup-env
-
+# ---- Interactive session ----
 if status is-interactive
-    # Commands to run in interactive sessions can go here
     eval (/opt/homebrew/bin/brew shellenv)
-    # starship
     starship init fish | source
-    # zoxide
     zoxide init fish | source
 end
 
@@ -89,16 +80,16 @@ function save_history --on-event fish_preexec
     history --merge
 end
 
-# Change zellij theme in config.kdl (mac only)
+# ---- Theme (follow macOS light/dark) ----
+# Update theme in ~/.config/zellij/config.kdl
 function _change_zellij_theme -a zellij_theme
-    # Require theme name
     test -n "$zellij_theme"; or return 1
     set -l config_file "$HOME/.config/zellij/config.kdl"
     test -f "$config_file"; or return 0
-    # sed in-place edit
     command sed -i '' -E "s/^theme \"[^\"]+\"/theme \"$zellij_theme\"/" "$config_file"
 end
-# TODO: instant swich
+
+# TODO: instant switch
 function toggle_theme
     if defaults read -g AppleInterfaceStyle &>/dev/null
         set -U theme "dark"

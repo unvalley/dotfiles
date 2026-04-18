@@ -20,7 +20,7 @@ abbr -a lt 'eza -T -L 3 -a -I "node_modules|.git|.cache" --icons'
 abbr -a eta 'eza -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
 abbr -a t 'eza -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
 abbr -a lta 'eza -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
-abbr -a rm 'gomi'
+abbr -a rm 'trash-put'
 abbr -a f 'fzf'
 abbr -a ps 'procs'
 abbr -a che 'chezmoi'
@@ -59,5 +59,9 @@ abbr -a doc 'docker'
 
 # file contents to clipboard
 abbr -a clip 'pbcopy < '
+
+# Claude
+abbr -a cl 'claude'
+abbr -a cld 'claude --dangerously-skip-permissions'
 
 alias aws-login 'aws sso login --sso-session dev'
