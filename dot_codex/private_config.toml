@@ -1,7 +1,12 @@
 model_reasoning_effort = "high"
 notify = ["bash", "-lc", "afplay /System/Library/Sounds/Ping.aiff"]
+personality = "pragmatic"
+model = "gpt-5.4"
+hide_agent_reasoning = true
+service_tier = "fast"
 
 [features]
+multi_agent = true
 # web_search = "live"
 
 [mcp_servers.chrome-devtools]
@@ -11,3 +16,9 @@ args = ["chrome-devtools-mcp@latest"]
 [mcp_servers.playwright]
 command = "npx"
 args = ["-y", "@playwright/mcp"]
+
+[plugins."gmail@openai-curated"]
+enabled = true
+
+[plugins."github@openai-curated"]
+enabled = true
