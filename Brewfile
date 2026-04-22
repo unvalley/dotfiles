@@ -32,7 +32,7 @@ brew "fd"                          # find replacement
 brew "procs"                       # ps replacement
 brew "ripgrep"                     # grep replacement
 brew "tree"                        # Directory tree listing
-brew "trash-cli"                   # Safe `rm` to system trash
+brew "gomi"                        # Safe `rm` to system trash
 
 # =============================================================================
 # Dev utilities
