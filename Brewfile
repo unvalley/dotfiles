@@ -51,32 +51,16 @@ brew "tealdeer"                    # Fast tldr client
 brew "daipeihust/tap/im-select"    # Input method switcher
 
 # =============================================================================
-# Image / Media
-# =============================================================================
-brew "aom"                         # AV1 codec
-brew "jpeg-xl"                     # JPEG XL format
-brew "webp"                        # WebP format
-
-# =============================================================================
 # Languages & Toolchains
 # =============================================================================
 brew "go"                          # Go
 brew "llvm"                        # LLVM toolchain
-brew "luajit"                      # LuaJIT
 brew "rustup-init"                 # Rust installer
 
 # =============================================================================
 # System libraries
 # =============================================================================
 brew "gd"                          # Graphics library
-brew "gdk-pixbuf"                  # Image loading
-brew "glib"                        # GLib core library
-brew "harfbuzz"                    # Text shaping
-brew "krb5"                        # Kerberos
-brew "libomp"                      # LLVM OpenMP
-brew "pango"                       # Text layout
-brew "qemu"                        # Machine emulator
-brew "qt"                          # Qt framework
 
 # =============================================================================
 # Terminal multiplexer
