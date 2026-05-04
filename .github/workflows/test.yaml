@@ -1,18 +1,59 @@
 name: test
 
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
 
 jobs:
-  test:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: ["ubuntu-latest", "macos-latest"]
-    runs-on: ${{ matrix.os }}
-    timeout-minutes: 10
-    
+  lint:
+    runs-on: macos-latest
+    timeout-minutes: 5
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-    - name: Install dotfiles
-      run: sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply unvalley
+      - name: Install tools
+        run: brew install fish just
+
+      - name: Lint fish config
+        shell: bash
+        run: |
+          set -e
+          shopt -s nullglob
+          files=(
+            dot_config/private_fish/private_config.fish
+            dot_config/private_fish/private_conf.d/*.fish
+          )
+          for f in "${files[@]}"; do
+            echo "::group::$f"
+            fish --no-execute "$f"
+            echo "::endgroup::"
+          done
+
+      - name: Validate justfile
+        run: |
+          just --unstable --fmt --check
+          just --list
+
+      - name: Validate Brewfile syntax
+        run: brew bundle list --file=Brewfile >/dev/null
+
+  apply:
+    runs-on: macos-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install chezmoi
+        run: brew install chezmoi
+
+      - name: Apply dotfiles
+        run: chezmoi apply --source "$PWD" --destination "$HOME" --verbose
+
+      - name: Verify key files exist
+        run: |
+          set -e
+          test -f "$HOME/.config/fish/config.fish"
+          test -f "$HOME/.config/starship.toml"
+          test -f "$HOME/.gitconfig"
+          test -f "$HOME/CLAUDE.md"
