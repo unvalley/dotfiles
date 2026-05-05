@@ -30,7 +30,7 @@ All first-time setup lives in `justfile`. Run `just --list` to see recipes
 - **Terminal**: WezTerm, with Zellij multiplexer.
 - **Editors**: VS Code (primary) and Zed, both with Vim mode.
 - **Git**: delta pager, conventional commits via `czg`.
-- **Package managers**: Homebrew (system), Volta (Node), rustup (Rust), proto (polyglot).
+- **Package managers**: Homebrew (system), rustup (Rust).
 
 ## Known gotchas
 

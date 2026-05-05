@@ -12,38 +12,15 @@ set -x EXSQL_BQ_RUNNING_PROJECT exsql-sandbox
 fish_add_path $EXSQL_HOME/target/debug
 
 # ---- Rust ----
-fish_add_path ~/.rustup/toolchains/stable-x86_64-apple-darwin/bin
 fish_add_path ~/.rustup/toolchains/stable-aarch64-apple-darwin/bin
 fish_add_path ~/.rustup/toolchains/nightly-aarch64-apple-darwin/bin
 fish_add_path $HOME/.cargo/bin
-
-# ---- Go ----
-set -x GOENV_ROOT $HOME/.goenv
-fish_add_path $GOENV_ROOT/bin
-fish_add_path $GOROOT/bin
-fish_add_path $GOPATH/bin
-
-# ---- Python ----
-set -x PYENV_ROOT $HOME/.pyenv
-fish_add_path $PYENV_ROOT/bin
-
-# ---- Node.js (Volta) ----
-set -gx VOLTA_HOME "$HOME/.volta"
-if test -d $VOLTA_HOME/bin
-    fish_add_path $VOLTA_HOME/bin
-end
 
 # ---- AWS ----
 set -gx AWS_DEFAULT_REGION ap-northeast-1
 
 # ---- Google Cloud SDK ----
 set -x CLOUDSDK_PYTHON python3
-
-# ---- Haskell (ghcup) ----
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
-if test -f $HOME/.ghcup/env
-    fish_add_path $HOME/.cabal/bin $HOME/.ghcup/bin
-end
 
 # ---- fzf ----
 function fzf

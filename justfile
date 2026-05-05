@@ -65,8 +65,3 @@ setup-gh-extensions:
 setup-rust:
     rustup-init
     rustc -v
-
-# Install Node.js via Volta
-setup-nodejs:
-    volta install node
-    node -v
