@@ -2,7 +2,6 @@
 # Taps
 # =============================================================================
 tap "daipeihust/tap"               # im-select and other community tools
-tap "koekeishiya/formulae"         # yabai / skhd window management
 
 # =============================================================================
 # Core CLI
@@ -42,18 +41,14 @@ brew "csview"                      # CSV viewer
 brew "dua-cli"                     # Interactive disk usage
 brew "fdupes"                      # Find duplicate files
 brew "rdfind"                      # Find duplicate files (alt)
-brew "hey"                         # HTTP load generator
 brew "hyperfine"                   # Benchmarking tool
 brew "jq"                          # JSON processor
-brew "navi"                        # Interactive cheatsheet
-brew "shellharden"                 # Shell script linter
 brew "tealdeer"                    # Fast tldr client
 brew "daipeihust/tap/im-select"    # Input method switcher
 
 # =============================================================================
 # Languages & Toolchains
 # =============================================================================
-brew "go"                          # Go
 brew "llvm"                        # LLVM toolchain
 brew "rustup-init"                 # Rust installer
 
