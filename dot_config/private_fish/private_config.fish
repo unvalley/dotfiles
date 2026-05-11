@@ -5,6 +5,7 @@ set fish_greeting
 set -x EDITOR vim
 set -x LANG en_US.UTF-8
 set -x GIT_MERGE_AUTOEDIT no
+fish_add_path $HOME/.local/bin
 
 # ---- Project: EXSQL ----
 set -x EXSQL_HOME ~/ghq/github.com/codatum/exsql
