@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "skills": {
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "skillFolderHash": "079b06a135401704ea94ab74c7c9d86c92ba259f",
+      "installedAt": "2026-01-24T08:13:22.155Z",
+      "updatedAt": "2026-02-21T09:23:28.733Z"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "skillFolderHash": "3116f3e62dbd02b44a598b1aa690d2a8938e8f89",
+      "installedAt": "2026-01-24T08:13:22.175Z",
+      "updatedAt": "2026-02-21T09:23:28.751Z"
+    },
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/composition-patterns/SKILL.md",
+      "skillFolderHash": "bf90d0a4b83ea054653350f9c67f6de235d3a368",
+      "installedAt": "2026-02-21T09:23:28.717Z",
+      "updatedAt": "2026-02-21T09:23:28.717Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-02-21T09:23:37.398Z",
+      "updatedAt": "2026-02-21T09:23:37.398Z"
+    },
+    "freee-api-skill": {
+      "source": "freee/freee-mcp",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/freee/freee-mcp.git",
+      "skillPath": "skills/freee-api-skill/SKILL.md",
+      "skillFolderHash": "898502267821dd000f223a26ab14c9eda2504394",
+      "installedAt": "2026-03-08T14:19:28.712Z",
+      "updatedAt": "2026-03-08T14:19:28.712Z"
+    },
+    "emil-design-eng": {
+      "source": "emilkowalski/skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/emilkowalski/skill.git",
+      "skillPath": "skills/emil-design-eng/SKILL.md",
+      "skillFolderHash": "42244c68fa853423b28f9c2ac53adf38bb45d60f",
+      "installedAt": "2026-03-22T13:20:07.825Z",
+      "updatedAt": "2026-03-22T13:20:07.825Z"
+    },
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
+      "skillPath": "skills/agent-browser/SKILL.md",
+      "skillFolderHash": "3b319028d5e51497e251a3481d2c7d8521a860eb",
+      "installedAt": "2026-04-04T16:05:36.364Z",
+      "updatedAt": "2026-04-04T16:05:36.364Z"
+    },
+    "dogfood": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
+      "skillPath": "skills/dogfood/SKILL.md",
+      "skillFolderHash": "c818a5daf6e6ef6ec6375705df201499de4e6437",
+      "installedAt": "2026-04-04T16:05:36.368Z",
+      "updatedAt": "2026-04-04T16:05:36.368Z"
+    },
+    "slack": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
+      "skillPath": "skills/slack/SKILL.md",
+      "skillFolderHash": "b61acf1a637c9cd5ebfc2ec90b8be68ae6fa0e7e",
+      "installedAt": "2026-04-04T16:05:36.369Z",
+      "updatedAt": "2026-04-04T16:05:36.369Z"
+    },
+    "electron": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
+      "skillPath": "skills/electron/SKILL.md",
+      "skillFolderHash": "79bf2fb6edfcf688931e6f1a444da144b835ccbd",
+      "installedAt": "2026-04-04T16:05:36.375Z",
+      "updatedAt": "2026-04-04T16:05:36.375Z"
+    },
+    "vercel-sandbox": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
+      "skillPath": "skills/vercel-sandbox/SKILL.md",
+      "skillFolderHash": "914c0dbdcc5f7408a840b29125625b11e6459390",
+      "installedAt": "2026-04-04T16:05:36.377Z",
+      "updatedAt": "2026-04-04T16:05:36.377Z"
+    },
+    "budge": {
+      "source": "ben-million/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ben-million/skills.git",
+      "skillPath": "skills/budge/SKILL.md",
+      "skillFolderHash": "f18f31c537c6c9653b8de0f5f6d48bb5190cc68d",
+      "installedAt": "2026-04-25T03:38:49.658Z",
+      "updatedAt": "2026-04-25T03:38:49.658Z"
+    }
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "firebender",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "warp",
+    "claude-code"
+  ],
+  "dismissed": {
+    "findSkillsPrompt": true
+  }
+}
