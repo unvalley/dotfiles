@@ -1,29 +1,31 @@
-unvalley's dotfiles managed with chezmoi.
-Thanks for all dependencies.
+# unvalley's dotfiles
 
-| Tool             | Name                                      |
-| ---------------- | ----------------------------------------- |
-| dotfiles manager | [chezmoi](https://chezmoi.io)             |
-| Terminal         | [Wezterm](https://github.com/wez/wezterm) |
-| Shell            | [fish](https://fishshell.com)             |
-| Browser          | [Arc Browser](https://arc.net)            |
-| Password Manager | [Bitwarden](https://bitwarden.com)        |
+Personal macOS dotfiles managed with [chezmoi](https://chezmoi.io).
 
-## Chrome Extensions
+## Stack
 
-- Bitwarden
-- Vimium
-- AutoPagerize
-- BlockTube
-- DF Tube (Distraction Free for YouTube)
-- Calm Twitter
-- DeepL
-- Refined GitHub
+| Role             | Tool                                                        |
+| ---------------- | ----------------------------------------------------------- |
+| Dotfiles manager | [chezmoi](https://chezmoi.io)                               |
+| Terminal         | [WezTerm](https://github.com/wez/wezterm)                   |
+| Shell            | [fish](https://fishshell.com)                               |
+| Prompt           | [starship](https://starship.rs)                             |
+| Multiplexer      | [Zellij](https://zellij.dev)                                |
+| Editors          | [VS Code](https://code.visualstudio.com), [Zed](https://zed.dev) |
+| Git pager        | [delta](https://github.com/dandavison/delta)                |
 
 ## Setup
 
-- [ ] Install [Arc Browser](https://arc.net)
-- [ ] Install [Bitwarden Chrome Extension]()
-- [ ] Clone this repository (unvalley/dotfiles) on user directory (/Users/${username})
-- [ ] Install [Homebrew](https://brew.sh/)
-- [ ] Execute `just` commands on `justfile`
+1. Install [Homebrew](https://brew.sh/)
+2. Clone this repository (`unvalley/dotfiles`) under `$HOME`
+3. Run the recipes in [`justfile`](./justfile) — start with `just setup-brewfile` and `just setup-chezmoi`
+
+See `just --list` for all available setup commands.
+
+## Structure
+
+- `dot_config/` — CLI tool configs (git, fish, starship, wezterm, zellij, zed, gh, gitui)
+- `private_Library/` — macOS app support (Ghostty config)
+- `dot_cargo/`, `dot_codex/` — language toolchain configs
+- `browser_extensions/` — userscripts / userstyles
+- `dictionary/` — IME dictionaries

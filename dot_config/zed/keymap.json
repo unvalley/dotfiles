@@ -15,14 +15,8 @@
   {
     "context": "Editor",
     "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
       "f11": "pane::GoBack",
-      "cmd-shift-enter": "workspace::ToggleBottomDock"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
+      "cmd-shift-enter": "workspace::ToggleBottomDock",
       "ctrl-c": "vim::ToggleVisual"
     }
   }
