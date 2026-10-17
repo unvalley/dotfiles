@@ -25,7 +25,8 @@ See `just --list` for all available setup commands.
 ## Structure
 
 - `dot_config/` — CLI tool configs (git, fish, starship, wezterm, zellij, zed, gh, gitui)
-- `private_Library/` — macOS app support (Ghostty config)
+- `private_Library/` — macOS app support (Ghostty config, LaunchAgents)
+- `private_dot_local/bin/` — personal scripts (`sync-main`: fast-forwards `main` every 3 hours in the repos listed in `~/.config/sync-main/repos`, which stays out of chezmoi)
 - `dot_cargo/`, `dot_codex/` — language toolchain configs
 - `browser_extensions/` — userscripts / userstyles
 - `dictionary/` — IME dictionaries

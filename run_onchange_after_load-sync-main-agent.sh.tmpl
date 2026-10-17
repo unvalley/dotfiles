@@ -1,0 +1,18 @@
+#!/bin/sh
+# (Re)load the sync-main LaunchAgent whenever its plist changes.
+# plist hash: {{ include "private_Library/LaunchAgents/com.unvalley.sync-main.plist.tmpl" | sha256sum }}
+
+# CI runners have no login session to load agents into.
+[ -n "${CI:-}" ] && exit 0
+
+domain="gui/$(id -u)"
+label=com.unvalley.sync-main
+plist="$HOME/Library/LaunchAgents/$label.plist"
+
+launchctl bootout "$domain/$label" 2>/dev/null
+# bootout returns before the job is fully removed, so retry briefly.
+for _ in 1 2 3 4 5; do
+	launchctl bootstrap "$domain" "$plist" 2>/dev/null && exit 0
+	sleep 1
+done
+launchctl bootstrap "$domain" "$plist"

@@ -1,0 +1,105 @@
+#!/bin/bash
+# Fast-forward local `main` to `origin/main` in each repository listed in
+# ~/.config/sync-main/repos (not managed by chezmoi). One repository per line:
+# an absolute path, ~/path, or a path relative to `ghq root`. Lines starting
+# with # are ignored.
+#
+# Run every 3 hours by ~/Library/LaunchAgents/com.unvalley.sync-main.plist;
+# output goes to ~/Library/Logs/sync-main.log.
+#
+# Only fast-forwards. A main with commits not on origin is left alone, and a
+# checked-out main is skipped while its working tree has local changes.
+
+set -u
+
+export PATH="/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export GIT_TERMINAL_PROMPT=0
+
+BRANCH=main
+REMOTE=origin
+CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/sync-main/repos"
+
+log() { printf '%s %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$*"; }
+
+resolve_path() {
+	case "$1" in
+	/*) printf '%s\n' "$1" ;;
+	"~" | "~/"*) printf '%s\n' "$HOME${1#\~}" ;;
+	*) printf '%s/%s\n' "$GHQ_ROOT" "$1" ;;
+	esac
+}
+
+# Print the worktree that has $BRANCH checked out, if any.
+checked_out_in() {
+	git -C "$1" worktree list --porcelain | awk -v ref="refs/heads/$BRANCH" '
+		/^worktree / { wt = substr($0, 10) }
+		$0 == "branch " ref { print wt; exit }'
+}
+
+sync_repo() {
+	local repo=$1 name=$2 local_ref="refs/heads/$BRANCH" remote_ref="refs/remotes/$REMOTE/$BRANCH"
+	local before after wt
+
+	if ! git -C "$repo" rev-parse --git-dir >/dev/null 2>&1; then
+		log "FAIL $name: not a git repository ($repo)"
+		return 1
+	fi
+	if ! git -C "$repo" fetch --quiet "$REMOTE"; then
+		log "FAIL $name: fetch from $REMOTE failed"
+		return 1
+	fi
+	if ! git -C "$repo" show-ref --verify --quiet "$local_ref"; then
+		log "SKIP $name: no local $BRANCH"
+		return 0
+	fi
+	if ! after=$(git -C "$repo" rev-parse --verify --quiet "$remote_ref"); then
+		log "FAIL $name: $REMOTE/$BRANCH not found"
+		return 1
+	fi
+	before=$(git -C "$repo" rev-parse "$local_ref")
+
+	if [ "$before" = "$after" ]; then
+		log "OK   $name: up to date (${after:0:8})"
+		return 0
+	fi
+	if ! git -C "$repo" merge-base --is-ancestor "$local_ref" "$remote_ref"; then
+		log "SKIP $name: $BRANCH has commits not on $REMOTE/$BRANCH"
+		return 0
+	fi
+
+	wt=$(checked_out_in "$repo")
+	if [ -z "$wt" ]; then
+		# Not checked out anywhere, so only the ref moves. Fetching from the
+		# repository itself keeps git's guards: fast-forward only, and no update
+		# while the branch is being rebased or bisected.
+		if ! git -C "$repo" fetch --quiet --no-write-fetch-head . "$remote_ref:$local_ref"; then
+			log "FAIL $name: could not fast-forward $BRANCH"
+			return 1
+		fi
+	else
+		if [ -n "$(git -C "$wt" status --porcelain --untracked-files=no)" ]; then
+			log "SKIP $name: $BRANCH is checked out in $wt with local changes"
+			return 0
+		fi
+		if ! git -C "$wt" merge --ff-only --quiet "$remote_ref"; then
+			log "FAIL $name: could not fast-forward $BRANCH in $wt"
+			return 1
+		fi
+	fi
+	log "OK   $name: ${before:0:8} -> ${after:0:8}"
+}
+
+if [ ! -f "$CONFIG" ]; then
+	log "FAIL no repository list at $CONFIG"
+	exit 1
+fi
+
+GHQ_ROOT=$(ghq root 2>/dev/null) || GHQ_ROOT="$HOME/ghq"
+
+failed=0
+while read -r line || [ -n "$line" ]; do
+	case "$line" in '' | '#'*) continue ;; esac
+	# </dev/null keeps git, ssh and credential helpers from reading the list.
+	sync_repo "$(resolve_path "$line")" "$line" </dev/null || failed=1
+done <"$CONFIG"
+exit "$failed"
