@@ -7,8 +7,9 @@
 # Run every 3 hours by ~/Library/LaunchAgents/com.unvalley.sync-main.plist;
 # output goes to ~/Library/Logs/sync-main.log.
 #
-# Only fast-forwards. A main with commits not on origin is left alone, and a
-# checked-out main is skipped while its working tree has local changes.
+# Only fast-forwards. A main with commits not on origin is left alone. A
+# checked-out main is updated with its uncommitted changes kept, and skipped
+# only when those changes touch files that origin also changed.
 
 set -u
 
@@ -38,7 +39,7 @@ checked_out_in() {
 
 sync_repo() {
 	local repo=$1 name=$2 local_ref="refs/heads/$BRANCH" remote_ref="refs/remotes/$REMOTE/$BRANCH"
-	local before after wt
+	local before after wt overlap err
 
 	if ! git -C "$repo" rev-parse --git-dir >/dev/null 2>&1; then
 		log "FAIL $name: not a git repository ($repo)"
@@ -77,12 +78,22 @@ sync_repo() {
 			return 1
 		fi
 	else
-		if [ -n "$(git -C "$wt" status --porcelain --untracked-files=no)" ]; then
-			log "SKIP $name: $BRANCH is checked out in $wt with local changes"
+		# Uncommitted changes ride along with the fast-forward. git refuses when
+		# origin changed the same files (or adds a path that exists untracked),
+		# so report those as a skip up front.
+		overlap=$(comm -12 \
+			<({
+				git -C "$wt" diff --name-only --no-renames HEAD
+				git -C "$wt" ls-files --others --exclude-standard
+			} | sort) \
+			<(git -C "$repo" diff --name-only --no-renames "$local_ref" "$remote_ref" | sort) |
+			paste -sd ' ' -)
+		if [ -n "$overlap" ]; then
+			log "SKIP $name: local changes in $wt overlap origin: $overlap"
 			return 0
 		fi
-		if ! git -C "$wt" merge --ff-only --quiet "$remote_ref"; then
-			log "FAIL $name: could not fast-forward $BRANCH in $wt"
+		if ! err=$(git -C "$wt" merge --ff-only --quiet "$remote_ref" 2>&1); then
+			log "FAIL $name: could not fast-forward $BRANCH in $wt: $(printf '%s\n' "$err" | head -n 1)"
 			return 1
 		fi
 	fi
