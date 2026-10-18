@@ -56,4 +56,4 @@ jobs:
           test -f "$HOME/.config/fish/config.fish"
           test -f "$HOME/.config/starship.toml"
           test -f "$HOME/.gitconfig"
-          test -f "$HOME/CLAUDE.md"
+          test -f "$HOME/AGENTS.md"
