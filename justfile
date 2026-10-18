@@ -43,6 +43,19 @@ setup-screenshot:
 setup-vscode:
     defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
+# Apply Xcode editor prefs (Vim mode, key-repeat, line numbers, 80-col guide, Catppuccin themes)
+setup-xcode:
+    defaults write com.apple.dt.Xcode KeyBindingsMode -string Vim
+    defaults write com.apple.dt.Xcode ApplePressAndHoldEnabled -bool false
+    defaults write com.apple.dt.Xcode DVTTextShowLineNumbers -bool true
+    defaults write com.apple.dt.Xcode DVTTextShowPageGuide -bool true
+    defaults write com.apple.dt.Xcode DVTTextPageGuideLocation -int 80
+    defaults write com.apple.dt.Xcode DVTTextShowInvisibleCharacters -bool true
+    defaults write com.apple.dt.Xcode DVTTextEditorTrimTrailingWhitespace -bool true
+    defaults write com.apple.dt.Xcode DVTTextEditorTrimWhitespaceOnlyLines -bool true
+    defaults write com.apple.dt.Xcode XCFontAndColorCurrentTheme -string "Catppuccin Latte.xccolortheme"
+    defaults write com.apple.dt.Xcode XCFontAndColorCurrentDarkTheme -string "Catppuccin Mocha.xccolortheme"
+
 # --- Git / GitHub ---
 
 # Configure global Git identity

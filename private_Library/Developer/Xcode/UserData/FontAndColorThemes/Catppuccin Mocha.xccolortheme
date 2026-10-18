@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Catppuccin Mocha theme for Xcode.
+
+  Mirrors the editor preferences used in VS Code and Zed in this repo:
+  Catppuccin palette + Hack Nerd Font Mono at size 15.
+  Xcode has no single JSON settings file, so font/color live in this
+  .xccolortheme while behaviour toggles (Vim mode, line numbers, page
+  guide at 80, etc.) are applied via `just setup-xcode`.
+
+  Palette: https://github.com/catppuccin/catppuccin (Mocha)
+-->
+<plist version="1.0">
+<dict>
+	<key>DVTConsoleDebuggerInputTextColor</key>
+	<string>0.803922 0.839216 0.956863 1</string>
+	<key>DVTConsoleDebuggerInputTextFont</key>
+	<string>HackNFM-Bold - 15.0</string>
+	<key>DVTConsoleDebuggerOutputTextColor</key>
+	<string>0.803922 0.839216 0.956863 1</string>
+	<key>DVTConsoleDebuggerOutputTextFont</key>
+	<string>HackNFM-Regular - 15.0</string>
+	<key>DVTConsoleDebuggerPromptTextColor</key>
+	<string>0.796078 0.650980 0.968627 1</string>
+	<key>DVTConsoleDebuggerPromptTextFont</key>
+	<string>HackNFM-Bold - 15.0</string>
+	<key>DVTConsoleExectuableInputTextColor</key>
+	<string>0.803922 0.839216 0.956863 1</string>
+	<key>DVTConsoleExectuableInputTextFont</key>
+	<string>HackNFM-Bold - 15.0</string>
+	<key>DVTConsoleExectuableOutputTextColor</key>
+	<string>0.729412 0.760784 0.870588 1</string>
+	<key>DVTConsoleExectuableOutputTextFont</key>
+	<string>HackNFM-Regular - 15.0</string>
+	<key>DVTConsoleTextBackgroundColor</key>
+	<string>0.094118 0.094118 0.145098 1</string>
+	<key>DVTConsoleTextInsertionPointColor</key>
+	<string>0.960784 0.878431 0.862745 1</string>
+	<key>DVTConsoleTextSelectionColor</key>
+	<string>0.270588 0.278431 0.352941 1</string>
+	<key>DVTDebuggerInstructionPointerColor</key>
+	<string>0.976471 0.886275 0.686275 1</string>
+	<key>DVTLineSpacing</key>
+	<real>1.05</real>
+	<key>DVTMarkupTextBackgroundColor</key>
+	<string>0.117647 0.117647 0.180392 1</string>
+	<key>DVTMarkupTextBorderColor</key>
+	<string>0.270588 0.278431 0.352941 1</string>
+	<key>DVTMarkupTextCodeFont</key>
+	<string>HackNFM-Regular - 15.0</string>
+	<key>DVTMarkupTextEmphasisColor</key>
+	<string>0.803922 0.839216 0.956863 1</string>
+	<key>DVTMarkupTextEmphasisFont</key>
+	<string>HackNFM-BoldItalic - 15.0</string>
+	<key>DVTMarkupTextInlineCodeColor</key>
+	<string>0.650980 0.890196 0.631373 1</string>
+	<key>DVTMarkupTextInlineCodeFont</key>
+	<string>HackNFM-Regular - 15.0</string>
+	<key>DVTMarkupTextLinkColor</key>
+	<string>0.537255 0.705882 0.980392 1</string>
+	<key>DVTMarkupTextLinkFont</key>
+	<string>HackNFM-Regular - 15.0</string>
+	<key>DVTMarkupTextNormalColor</key>
+	<string>0.803922 0.839216 0.956863 1</string>
+	<key>DVTMarkupTextNormalFont</key>
+	<string>HackNFM-Regular - 15.0</string>
+	<key>DVTMarkupTextOtherHeadingColor</key>
+	<string>0.796078 0.650980 0.968627 1</string>
+	<key>DVTMarkupTextOtherHeadingFont</key>
+	<string>HackNFM-Bold - 15.0</string>
+	<key>DVTMarkupTextPrimaryHeadingColor</key>
+	<string>0.796078 0.650980 0.968627 1</string>
+	<key>DVTMarkupTextPrimaryHeadingFont</key>
+	<string>HackNFM-Bold - 22.0</string>
+	<key>DVTMarkupTextSecondaryHeadingColor</key>
+	<string>0.796078 0.650980 0.968627 1</string>
+	<key>DVTMarkupTextSecondaryHeadingFont</key>
+	<string>HackNFM-Bold - 18.0</string>
+	<key>DVTMarkupTextStrongColor</key>
+	<string>0.803922 0.839216 0.956863 1</string>
+	<key>DVTMarkupTextStrongFont</key>
+	<string>HackNFM-Bold - 15.0</string>
+	<key>DVTScrollbarMarkerAnalyzerColor</key>
+	<string>0.537255 0.705882 0.980392 1</string>
+	<key>DVTScrollbarMarkerBreakpointColor</key>
+	<string>0.537255 0.862745 0.921569 1</string>
+	<key>DVTScrollbarMarkerDiffColor</key>
+	<string>0.650980 0.890196 0.631373 1</string>
+	<key>DVTScrollbarMarkerDiffConflictColor</key>
+	<string>0.952941 0.545098 0.658824 1</string>
+	<key>DVTScrollbarMarkerErrorColor</key>
+	<string>0.952941 0.545098 0.658824 1</string>
+	<key>DVTScrollbarMarkerRuntimeIssueColor</key>
+	<string>0.796078 0.650980 0.968627 1</string>
+	<key>DVTScrollbarMarkerStaticAnalyzerColor</key>
+	<string>0.537255 0.705882 0.980392 1</string>
+	<key>DVTScrollbarMarkerWarningColor</key>
+	<string>0.976471 0.886275 0.686275 1</string>
+	<key>DVTSourceTextBackground</key>
+	<string>0.117647 0.117647 0.180392 1</string>
+	<key>DVTSourceTextBlockDimBackgroundColor</key>
+	<string>0.094118 0.094118 0.145098 1</string>
+	<key>DVTSourceTextCurrentLineHighlightColor</key>
+	<string>0.192157 0.196078 0.266667 1</string>
+	<key>DVTSourceTextInsertionPointColor</key>
+	<string>0.960784 0.878431 0.862745 1</string>
+	<key>DVTSourceTextInvisiblesColor</key>
+	<string>0.345098 0.356863 0.439216 1</string>
+	<key>DVTSourceTextSelectionColor</key>
+	<string>0.270588 0.278431 0.352941 1</string>
+	<key>DVTSourceTextSyntaxColors</key>
+	<dict>
+		<key>xcode.syntax.attribute</key>
+		<string>0.976471 0.886275 0.686275 1</string>
+		<key>xcode.syntax.character</key>
+		<string>0.980392 0.701961 0.529412 1</string>
+		<key>xcode.syntax.comment</key>
+		<string>0.576471 0.600000 0.698039 1</string>
+		<key>xcode.syntax.comment.doc</key>
+		<string>0.576471 0.600000 0.698039 1</string>
+		<key>xcode.syntax.comment.doc.keyword</key>
+		<string>0.729412 0.760784 0.870588 1</string>
+		<key>xcode.syntax.declaration.other</key>
+		<string>0.537255 0.705882 0.980392 1</string>
+		<key>xcode.syntax.declaration.type</key>
+		<string>0.537255 0.862745 0.921569 1</string>
+		<key>xcode.syntax.identifier.class</key>
+		<string>0.976471 0.886275 0.686275 1</string>
+		<key>xcode.syntax.identifier.class.system</key>
+		<string>0.976471 0.886275 0.686275 1</string>
+		<key>xcode.syntax.identifier.constant</key>
+		<string>0.980392 0.701961 0.529412 1</string>
+		<key>xcode.syntax.identifier.constant.system</key>
+		<string>0.980392 0.701961 0.529412 1</string>
+		<key>xcode.syntax.identifier.function</key>
+		<string>0.537255 0.705882 0.980392 1</string>
+		<key>xcode.syntax.identifier.function.system</key>
+		<string>0.537255 0.705882 0.980392 1</string>
+		<key>xcode.syntax.identifier.macro</key>
+		<string>0.580392 0.886275 0.835294 1</string>
+		<key>xcode.syntax.identifier.macro.system</key>
+		<string>0.580392 0.886275 0.835294 1</string>
+		<key>xcode.syntax.identifier.type</key>
+		<string>0.976471 0.886275 0.686275 1</string>
+		<key>xcode.syntax.identifier.type.system</key>
+		<string>0.976471 0.886275 0.686275 1</string>
+		<key>xcode.syntax.identifier.variable</key>
+		<string>0.803922 0.839216 0.956863 1</string>
+		<key>xcode.syntax.identifier.variable.system</key>
+		<string>0.803922 0.839216 0.956863 1</string>
+		<key>xcode.syntax.keyword</key>
+		<string>0.796078 0.650980 0.968627 1</string>
+		<key>xcode.syntax.mark</key>
+		<string>0.576471 0.600000 0.698039 1</string>
+		<key>xcode.syntax.markup.code</key>
+		<string>0.650980 0.890196 0.631373 1</string>
+		<key>xcode.syntax.number</key>
+		<string>0.980392 0.701961 0.529412 1</string>
+		<key>xcode.syntax.plain</key>
+		<string>0.803922 0.839216 0.956863 1</string>
+		<key>xcode.syntax.preprocessor</key>
+		<string>0.960784 0.760784 0.905882 1</string>
+		<key>xcode.syntax.string</key>
+		<string>0.650980 0.890196 0.631373 1</string>
+		<key>xcode.syntax.url</key>
+		<string>0.537255 0.705882 0.980392 1</string>
+	</dict>
+	<key>DVTSourceTextSyntaxFonts</key>
+	<dict>
+		<key>xcode.syntax.attribute</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.character</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.comment</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.comment.doc</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.comment.doc.keyword</key>
+		<string>HackNFM-Bold - 15.0</string>
+		<key>xcode.syntax.declaration.other</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.declaration.type</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.identifier.class</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.identifier.class.system</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.identifier.constant</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.identifier.constant.system</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.identifier.function</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.identifier.function.system</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.identifier.macro</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.identifier.macro.system</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.identifier.type</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.identifier.type.system</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.identifier.variable</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.identifier.variable.system</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.keyword</key>
+		<string>HackNFM-Bold - 15.0</string>
+		<key>xcode.syntax.mark</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.markup.code</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.number</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.plain</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.preprocessor</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.string</key>
+		<string>HackNFM-Regular - 15.0</string>
+		<key>xcode.syntax.url</key>
+		<string>HackNFM-Regular - 15.0</string>
+	</dict>
+</dict>
+</plist>
